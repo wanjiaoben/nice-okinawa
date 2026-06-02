@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nice Okinawa | CatalinaJapan株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ocean: #1a3a4a;
+  --deep: #0d2233;
+  --reef: #2a6b7c;
+  --sand: #c8a96e;
+  --foam: #e8e4da;
+  --coral: #d4715a;
+  --mint: #4a9e8a;
+  --light: #f5f2ec;
+  --white: #ffffff;
+  --text: #1a2630;
+  --muted: #6b7e8a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--text);
+  background: var(--light);
+  overflow-x: hidden;
+}
+
+/* ── TOP BAR ── */
+.top-bar {
+  background: var(--deep);
+  color: rgba(255,255,255,0.65);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a { color: inherit; text-decoration: none; }
+.top-bar a:hover { color: var(--sand); }
+
+/* ── HEADER ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26,58,74,0.97);
+  backdrop-filter: blur(12px);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  transition: box-shadow 0.3s;
+}
+header.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+.logo span { color: var(--sand); font-style: italic; }
+
+nav { display: flex; gap: 32px; align-items: center; }
+nav a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 4px;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--sand);
+  transition: width 0.3s;
+}
+nav a:hover { color: var(--white); }
+nav a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: var(--sand);
+  color: var(--deep) !important;
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.nav-cta:hover { background: var(--coral) !important; }
+.nav-cta::after { display: none !important; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  height: 92vh;
+  min-height: 600px;
+  background: var(--deep);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1551244072-5d12893278bc?w=1800&q=80') center/cover no-repeat;
+  opacity: 0.35;
+  transform: scale(1.05);
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+@keyframes slow-zoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.12); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13,34,51,0.85) 0%, rgba(26,58,74,0.5) 60%, rgba(13,34,51,0.7) 100%);
+}
+
+/* wave bottom */
+.hero-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 0 60px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--sand);
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 6vw, 80px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--sand);
+}
+
+.hero-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 32px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+}
+
+.hero-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  max-width: 480px;
+  margin-bottom: 44px;
+}
+
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--sand);
+  color: var(--deep);
+  padding: 14px 32px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+.btn-primary:hover { background: var(--coral); color: var(--white); transform: translateY(-2px); }
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.85);
+  padding: 14px 32px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+.btn-outline:hover { border-color: var(--sand); color: var(--sand); }
+
+/* ── STATS BAND ── */
+.stats-band {
+  background: var(--ocean);
+  padding: 48px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--sand);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+  display: block;
+}
+
+/* ── SECTIONS COMMON ── */
+section { padding: 100px 60px; }
+
+.section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--reef);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--reef);
+  display: block;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--ocean);
+  margin-bottom: 16px;
+}
+
+.section-title em { font-style: italic; color: var(--coral); }
+
+.section-lead {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+/* ── ABOUT ── */
+.about-section {
+  background: var(--light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+.about-img {
+  position: relative;
+}
+.about-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+.about-img::before {
+  content: '';
+  position: absolute;
+  top: -16px; left: -16px;
+  right: 16px; bottom: 16px;
+  border: 1px solid var(--sand);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.about-text {}
+.about-body {
+  font-size: 15px;
+  line-height: 2;
+  color: #3a4e5a;
+  margin: 28px 0;
+}
+.about-body p + p { margin-top: 16px; }
+
+.about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--reef);
+  color: var(--reef);
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+/* ── SERVICES ── */
+.services-section {
+  background: var(--foam);
+  text-align: center;
+}
+
+.services-header { max-width: 600px; margin: 0 auto 64px; }
+.services-header .section-eyebrow { justify-content: center; }
+.services-header .section-eyebrow::before { display: none; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.08);
+}
+
+.service-card {
+  background: var(--white);
+  padding: 48px 36px;
+  text-align: left;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 3px;
+  background: var(--sand);
+  transition: width 0.4s;
+}
+.service-card:hover { background: var(--ocean); }
+.service-card:hover::before { width: 100%; }
+.service-card:hover .svc-icon { color: var(--sand); }
+.service-card:hover .svc-title { color: var(--white); }
+.service-card:hover .svc-body { color: rgba(255,255,255,0.65); }
+
+.svc-icon {
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: block;
+  color: var(--reef);
+  transition: color 0.3s;
+}
+.svc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ocean);
+  margin-bottom: 12px;
+  transition: color 0.3s;
+  line-height: 1.3;
+}
+.svc-body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+/* ── HISTORY ── */
+.history-section {
+  background: var(--deep);
+  padding: 100px 80px;
+}
+.history-section .section-title { color: var(--foam); }
+.history-section .section-eyebrow { color: var(--sand); }
+.history-section .section-eyebrow::before { background: var(--sand); }
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 60px;
+}
+
+.timeline { position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: 0;
+  width: 1px;
+  background: rgba(200,169,110,0.3);
+}
+
+.tl-item {
+  display: flex;
+  gap: 24px;
+  padding-left: 0;
+  margin-bottom: 36px;
+  position: relative;
+}
+.tl-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--sand);
+  min-width: 68px;
+  line-height: 1;
+  position: relative;
+}
+.tl-year::after {
+  content: '';
+  position: absolute;
+  right: -17px; top: 8px;
+  width: 9px; height: 9px;
+  background: var(--sand);
+  border-radius: 50%;
+}
+.tl-content {
+  padding-left: 8px;
+}
+.tl-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--foam);
+  margin-bottom: 4px;
+}
+.tl-desc {
+  font-size: 12px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+}
+
+.history-img {
+  position: relative;
+}
+.history-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: sepia(20%) brightness(0.85);
+}
+.history-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(13,34,51,0.9));
+  padding: 40px 28px 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* ── SUBDOMAINS ── */
+.sites-section {
+  background: var(--light);
+  text-align: center;
+}
+.sites-header { max-width: 560px; margin: 0 auto 64px; }
+.sites-header .section-eyebrow { justify-content: center; }
+.sites-header .section-eyebrow::before { display: none; }
+
+.sites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-card {
+  border: 1px solid rgba(42,107,124,0.2);
+  padding: 40px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.site-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--sand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s;
+}
+.site-card:hover { border-color: var(--reef); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,58,74,0.12); }
+.site-card:hover::before { transform: scaleX(1); }
+
+.site-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+.site-name {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--reef);
+  margin-bottom: 8px;
+}
+.site-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--ocean);
+  margin-bottom: 10px;
+}
+.site-desc { font-size: 12px; line-height: 1.7; color: var(--muted); }
+
+/* ── CONTACT ── */
+.contact-section {
+  background: var(--ocean);
+  padding: 100px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.contact-section .section-title { color: var(--foam); }
+.contact-section .section-eyebrow { color: var(--sand); }
+.contact-section .section-eyebrow::before { background: var(--sand); }
+.contact-section .section-lead { color: rgba(255,255,255,0.6); max-width: 400px; }
+
+.contact-info { margin-top: 40px; }
+.contact-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.contact-item-icon { font-size: 16px; margin-top: 2px; color: var(--sand); flex-shrink: 0; }
+.contact-item-text {}
+.contact-item-label {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 4px;
+}
+.contact-item-val {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+.contact-item-val a { color: inherit; text-decoration: none; }
+.contact-item-val a:hover { color: var(--sand); }
+
+.contact-form {}
+.form-row { margin-bottom: 16px; }
+.form-row label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--white);
+  padding: 12px 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px;
+  border-radius: 2px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus { border-color: var(--sand); }
+.form-row textarea { height: 110px; resize: vertical; }
+.form-row select option { background: var(--deep); }
+
+.form-submit {
+  width: 100%;
+  background: var(--sand);
+  color: var(--deep);
+  border: none;
+  padding: 15px 32px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.25s;
+  margin-top: 8px;
+}
+.form-submit:hover { background: var(--coral); color: var(--white); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--deep);
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--foam);
+  text-decoration: none;
+}
+.footer-logo small {
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35);
+  margin-top: 4px;
+}
+
+.footer-nav { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-nav a {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-nav a:hover { color: var(--sand); }
+
+.footer-copy {
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.1em;
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .top-bar { display: none; }
+  header { padding: 0 24px; }
+  nav { gap: 16px; }
+  nav a { display: none; }
+  nav a.nav-cta { display: block; }
+
+  section { padding: 64px 24px; }
+  .hero-content { padding: 0 24px; }
+
+  .about-section,
+  .history-grid,
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 24px;
+  }
+
+  .services-grid,
+  .sites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-band { gap: 40px; padding: 48px 24px; }
+  footer { flex-direction: column; text-align: center; padding: 32px 24px; }
+  .footer-nav { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span>📍 沖縄県那覇市  ·  CatalinaJapan株式会社</span>
+  <span>
+    <a href="mailto:info@nice.okinawa">info@nice.okinawa</a>
+    &nbsp;·&nbsp;
+    <a href="tel:+81-98-000-0000">+81-98-000-0000</a>
+  </span>
+</div>
+
+<!-- HEADER -->
+<header id="mainHeader">
+  <a href="/" class="logo">Nice <span>Okinawa</span></a>
+  <nav>
+    <a href="#about">会社案内</a>
+    <a href="#services">サービス</a>
+    <a href="#history">沿革</a>
+    <a href="#sites">サイト一覧</a>
+    <a href="#contact" class="nav-cta">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <svg class="hero-wave" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f5f2ec"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-eyebrow">沖縄 · OKINAWA · JAPAN</div>
+    <h1 class="hero-title">
+      Nice<br><em>Okinawa</em>
+    </h1>
+    <p class="hero-subtitle">沖縄と世界をつなぐ、あなたの島の窓口</p>
+    <p class="hero-desc">
+      2009年の創業以来、観光・日本語教育・AI活用支援など<br>
+      多様なサービスで、世界中の人々と沖縄の架け橋を担ってきました。
+    </p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">サービス一覧</a>
+      <a href="#contact" class="btn-outline">お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-item">
+    <span class="stat-num">16</span>
+    <span class="stat-label">Years of Experience</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">5+</span>
+    <span class="stat-label">Service Domains</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">3</span>
+    <span class="stat-label">Languages Supported</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">24/7</span>
+    <span class="stat-label">Online Support</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-img reveal">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Okinawa ocean">
+  </div>
+  <div class="about-text reveal">
+    <div class="section-eyebrow">About Us</div>
+    <h2 class="section-title">沖縄を、<em>世界へ。</em></h2>
+    <div class="about-body">
+      <p>CatalinaJapan株式会社は2009年に設立。沖縄を拠点に、観光インバウンド・日本語教育・AIカスタマーサービス支援など、多言語・多分野にわたるサービスを展開しています。</p>
+      <p>中国語・日本語・英語の三言語を軸に、世界中のお客様と沖縄の魅力をつなぐ架け橋として、地域に根ざした事業を続けています。</p>
+      <p>「自分の田畑を自分で耕す」という精神のもと、オンライン・オフライン双方で、誠実なサービスをお届けしています。</p>
+    </div>
+    <div class="about-tags">
+      <span class="tag">観光インバウンド</span>
+      <span class="tag">日本語教育</span>
+      <span class="tag">AI支援</span>
+      <span class="tag">多言語対応</span>
+      <span class="tag">マリンスポーツ</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="services-header reveal">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-title">私たちの<em>サービス</em></h2>
+    <p class="section-lead" style="margin:0 auto;">観光から教育、AI活用まで。沖縄を中心に、多角的なサポートを提供しています。</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="svc-icon">🏝️</span>
+      <div class="svc-title">沖縄観光インバウンド</div>
+      <p class="svc-body">旅行手配・観光案内・通訳サポートなど、沖縄を訪れる外国人旅行者を全力でサポートします。</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-icon">🤿</span>
+      <div class="svc-title">游爽浮潜 マリンツアー</div>
+      <p class="svc-body">宜野湾マリーナ発。シュノーケリングツアーを中心に、沖縄の美しい海をご案内します。</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-icon">🎌</span>
+      <div class="svc-title">BJT日本語試験対策</div>
+      <p class="svc-body">ビジネス日本語テスト（BJT）専門の学習コンテンツ・オンライン指導。裸考591点の実績。</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-icon">💼</span>
+      <div class="svc-title">職場日本語コーチング</div>
+      <p class="svc-body">日本企業で働く外国人向けに、ビジネス敬語・メール文書・会議対応などを実践的に指導します。</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-icon">🤖</span>
+      <div class="svc-title">AIカスタマーサービス支援</div>
+      <p class="svc-body">沖縄の中小企業向けに、AI活用による顧客対応の自動化・効率化をサポートします。</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-icon">📚</span>
+      <div class="svc-title">出版・コンテンツ制作</div>
+      <p class="svc-body">Amazon Japanにて『BJT台本：400点突破』を出版。学習テキスト・デジタルコンテンツを多数展開。</p>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="history-section" id="history">
+  <div class="reveal">
+    <div class="section-eyebrow">Our History</div>
+    <h2 class="section-title">歩みとともに、<em>成長を。</em></h2>
+  </div>
+  <div class="history-grid">
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-year">2009</div>
+        <div class="tl-content">
+          <div class="tl-title">CatalinaJapan株式会社 創業</div>
+          <div class="tl-desc">沖縄・那覇市にて設立。観光インバウンド事業を開始。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <div class="tl-content">
+          <div class="tl-title">オンライン日語教室 開設</div>
+          <div class="tl-desc">深耕自留地として日本語オンライン教育を本格スタート。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2023</div>
+        <div class="tl-content">
+          <div class="tl-title">BJT対策コンテンツ 拡充</div>
+          <div class="tl-desc">bjt.nice.okinawa プラットフォーム開発・運営開始。500名超の受験者と交流。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-content">
+          <div class="tl-title">『BJT台本：400点突破』刊行</div>
+          <div class="tl-desc">Amazon Japan にて実体書を出版。マリンツアー事業も本格化。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2026</div>
+        <div class="tl-content">
+          <div class="tl-title">AI支援サービス 開始</div>
+          <div class="tl-desc">沖縄中小企業向けAIカスタマーサービス導入支援を展開中。</div>
+        </div>
+      </div>
+    </div>
+    <div class="history-img reveal">
+      <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&q=80" alt="Okinawa sea">
+      <div class="history-caption">「沖縄の海のように、<br>深く、澄んだ仕事を。」</div>
+    </div>
+  </div>
+</section>
+
+<!-- SUB-SITES -->
+<section class="sites-section" id="sites">
+  <div class="sites-header reveal">
+    <div class="section-eyebrow">Our Websites</div>
+    <h2 class="section-title">関連<em>サイト</em>一覧</h2>
+    <p class="section-lead" style="margin:0 auto; color: var(--muted);">各サービスの専用サイトをご覧ください。</p>
+  </div>
+  <div class="sites-grid">
+    <a href="https://bjt.nice.okinawa" class="site-card reveal">
+      <span class="site-icon">🎌</span>
+      <div class="site-name">bjt.nice.okinawa</div>
+      <div class="site-title">BJT日本語試験対策</div>
+      <p class="site-desc">会員制学習プラットフォーム。模擬試験・単語学習・添削指導。</p>
+    </a>
+    <a href="https://snorkel.nice.okinawa" class="site-card reveal">
+      <span class="site-icon">🤿</span>
+      <div class="site-name">snorkel.nice.okinawa</div>
+      <div class="site-title">游爽浮潜 シュノーケル</div>
+      <p class="site-desc">宜野湾発のシュノーケリングツアー。日中英三言語対応。</p>
+    </a>
+    <a href="https://fishing.nice.okinawa" class="site-card reveal">
+      <span class="site-icon">🎣</span>
+      <div class="site-name">fishing.nice.okinawa</div>
+      <div class="site-title">沖縄フィッシング</div>
+      <p class="site-desc">北谷・嘉手納発。体験釣りから本格GTフィッシングまで。</p>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div>
+    <div class="section-eyebrow">Contact</div>
+    <h2 class="section-title">お問い合わせ</h2>
+    <p class="section-lead">サービスに関するご質問・お見積もりはお気軽にどうぞ。中国語・英語でも対応しております。</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="contact-item-icon">📍</span>
+        <div class="contact-item-text">
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-val">沖縄県那覇市、日本</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">✉️</span>
+        <div class="contact-item-text">
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-val"><a href="mailto:info@nice.okinawa">info@nice.okinawa</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">💬</span>
+        <div class="contact-item-text">
+          <div class="contact-item-label">WeChat / WhatsApp</div>
+          <div class="contact-item-val">okinawaonline</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form reveal">
+    <div class="form-row">
+      <label>お名前 / Name</label>
+      <input type="text" placeholder="山田 太郎 / Taro Yamada">
+    </div>
+    <div class="form-row">
+      <label>メール / Email</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="form-row">
+      <label>お問い合わせ種類</label>
+      <select>
+        <option value="">選択してください</option>
+        <option>観光・旅行サポート</option>
+        <option>シュノーケリングツアー</option>
+        <option>BJT日本語試験対策</option>
+        <option>職場日本語コーチング</option>
+        <option>AI支援サービス</option>
+        <option>その他</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>ご相談内容</label>
+      <textarea placeholder="お気軽にご記入ください…"></textarea>
+    </div>
+    <button class="form-submit" id="submitBtn">送信する →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="footer-logo">
+    Nice Okinawa
+    <small>© 2009–2026 CatalinaJapan株式会社 · All rights reserved.</small>
+  </a>
+  <nav class="footer-nav">
+    <a href="#about">会社案内</a>
+    <a href="#services">サービス</a>
+    <a href="#history">沿革</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="#">プライバシーポリシー</a>
+  </nav>
+  <div class="footer-copy">Okinawa, Japan</div>
+</footer>
+
+<script>
+const header = document.getElementById('mainHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+revealEls.forEach(el => observer.observe(el));
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+  this.textContent = '送信しました ✓';
+  this.style.background = '#4a9e8a';
+  setTimeout(() => {
+    this.textContent = '送信する →';
+    this.style.background = '';
+  }, 3000);
+});
+</script>
+</body>
+</html>
