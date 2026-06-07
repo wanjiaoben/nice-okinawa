@@ -591,6 +591,115 @@ section { padding: 100px 60px; }
 .contact-item-val a { color: inherit; text-decoration: none; }
 .contact-item-val a:hover { color: var(--sand); }
 
+.float-contact {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .6rem;
+}
+.float-toggle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--sand);
+  color: var(--deep);
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(200,169,110,.42);
+  transition: all .3s;
+  flex-shrink: 0;
+}
+.float-toggle:hover { background: var(--coral); transform: scale(1.08); }
+.float-toggle.open { background: rgba(13,34,51,.88); color: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,.32); }
+.float-channels {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-end;
+  transition: all .3s;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+.float-channels.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.float-channel {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  background: rgba(13,34,51,.96);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  padding: .55rem .9rem;
+  text-decoration: none;
+  color: var(--white);
+  font-size: .8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,.32);
+  white-space: nowrap;
+  transition: all .2s;
+}
+.float-channel:hover { border-color: rgba(255,255,255,.25); transform: translateX(-3px); }
+.float-ch-icon { width: 28px; height: 28px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: .95rem; flex-shrink: 0; }
+.float-ch-icon.wechat { background: #09b83e; }
+.float-ch-icon.whatsapp { background: #25d366; }
+.float-ch-icon.email { background: #4a90d9; }
+.float-ch-name { font-size: .75rem; font-weight: 700; line-height: 1.2; }
+.float-ch-val { font-size: .64rem; color: rgba(255,255,255,.55); margin-top: .1rem; }
+.float-nav {
+  position: fixed;
+  bottom: 5.2rem;
+  right: 1.75rem;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+}
+.float-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13,34,51,.88);
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 20px;
+  padding: .5rem .75rem;
+  color: rgba(255,255,255,.85);
+  font-size: .7rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,.28);
+  transition: all .2s;
+  font-family: 'Josefin Sans', sans-serif;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 58px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.float-nav-btn:hover {
+  border-color: var(--sand);
+  color: var(--white);
+  background: rgba(200,169,110,.18);
+  transform: scale(1.06);
+}
+.float-nav::after {
+  content: '🌺';
+  font-size: .75rem;
+  opacity: .55;
+  margin-top: .15rem;
+  display: block;
+}
+
 .contact-form {}
 .form-row { margin-bottom: 16px; }
 .form-row label {
@@ -719,6 +828,9 @@ footer {
   .stats-band { gap: 40px; padding: 48px 24px; }
   footer { flex-direction: column; text-align: center; padding: 32px 24px; }
   .footer-nav { justify-content: center; }
+  .float-contact { right: 1.25rem; bottom: 1.25rem; }
+  .float-nav { right: 1.25rem; bottom: 4.8rem; }
+  .float-nav-btn { width: 50px; font-size: .62rem; padding: .45rem .5rem; }
 }
 </style>
 </head>
@@ -958,8 +1070,15 @@ footer {
       <div class="contact-item">
         <span class="contact-item-icon">💬</span>
         <div class="contact-item-text">
-          <div class="contact-item-label">WeChat / WhatsApp</div>
-          <div class="contact-item-val">okinawaonline</div>
+          <div class="contact-item-label">WhatsApp</div>
+          <div class="contact-item-val"><a href="https://wa.me/818070895239680" target="_blank" rel="noopener">+81 70-8952-3968</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">💬</span>
+        <div class="contact-item-text">
+          <div class="contact-item-label">WeChat</div>
+          <div class="contact-item-val"><a href="weixin://dl/chat?OkinawaOnline" onclick="copyWechat(event)">OkinawaOnline</a></div>
         </div>
       </div>
     </div>
@@ -1009,6 +1128,34 @@ footer {
   <div class="footer-copy">Okinawa, Japan</div>
 </footer>
 
+<!-- FLOAT NAV -->
+<div class="float-nav" id="float-nav">
+  <a class="float-nav-btn" href="#about" onclick="smoothTo(event,'about')">About</a>
+  <a class="float-nav-btn" href="#services" onclick="smoothTo(event,'services')">Service</a>
+  <a class="float-nav-btn" href="#history" onclick="smoothTo(event,'history')">History</a>
+  <a class="float-nav-btn" href="#sites" onclick="smoothTo(event,'sites')">Sites</a>
+  <a class="float-nav-btn" href="#contact" onclick="smoothTo(event,'contact')">Contact</a>
+</div>
+
+<!-- FLOAT CONTACT -->
+<div class="float-contact" id="float-contact">
+  <div class="float-channels" id="float-channels">
+    <a href="mailto:info@nice.okinawa" class="float-channel">
+      <div class="float-ch-icon email">✉️</div>
+      <div><div class="float-ch-name">Email</div><div class="float-ch-val">info@nice.okinawa</div></div>
+    </a>
+    <a href="https://wa.me/818070895239680" class="float-channel" target="_blank" rel="noopener">
+      <div class="float-ch-icon whatsapp">💬</div>
+      <div><div class="float-ch-name">WhatsApp</div><div class="float-ch-val">+81 70-8952-3968</div></div>
+    </a>
+    <a href="weixin://dl/chat?OkinawaOnline" class="float-channel" onclick="copyWechat(event)">
+      <div class="float-ch-icon wechat">💬</div>
+      <div><div class="float-ch-name">WeChat 微信</div><div class="float-ch-val">OkinawaOnline</div></div>
+    </a>
+  </div>
+  <button class="float-toggle" id="float-toggle" onclick="toggleFloat()" aria-label="Contact">✉</button>
+</div>
+
 <script>
 const header = document.getElementById('mainHeader');
 window.addEventListener('scroll', () => {
@@ -1028,6 +1175,43 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     this.textContent = '送信する →';
     this.style.background = '';
   }, 3000);
+});
+
+function smoothTo(e, id) {
+  e.preventDefault();
+  const target = document.getElementById(id);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleFloat() {
+  const toggle = document.getElementById('float-toggle');
+  const channels = document.getElementById('float-channels');
+  const isOpen = channels.classList.contains('open');
+  channels.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('open', !isOpen);
+  toggle.textContent = isOpen ? '✉' : '✕';
+}
+
+function copyWechat(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText('OkinawaOnline').then(() => {
+    alert('WeChat ID copied: OkinawaOnline');
+  }).catch(() => {
+    alert('WeChat ID: OkinawaOnline');
+  });
+}
+
+document.addEventListener('click', function(e) {
+  const fc = document.getElementById('float-contact');
+  if (fc && !fc.contains(e.target)) {
+    const channels = document.getElementById('float-channels');
+    const toggle = document.getElementById('float-toggle');
+    if (channels && channels.classList.contains('open')) {
+      channels.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.textContent = '✉';
+    }
+  }
 });
 </script>
 </body>
