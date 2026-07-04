@@ -45,19 +45,25 @@
   - `x-default` 指向既定默认页。
 - 本分支新增或修改的多语言 sitemap URL 必须线上可访问。存量不可访问 URL 写入 `audit/ISSUES.md`。
 
-## 5. 支付
+## 5. Contact
+
+- 面向用户的页面必须至少命中 1 次标准 WhatsApp 正链：wa.me/817089523968。
+- 跳转页、错误页、纯重定向兼容页豁免。
+- 若删除占位联系方式但未补标准正链 = FAIL。
+
+## 6. 支付
 
 - PayPal plan ID、IAP 产品 ID、webhook 路由必须与 `main` 完全一致。
 - 若本次需求就是支付变更，报告中单独说明变更点、测试账号、回滚方式。
 - 未触及支付文件时，标注 `N/A：diff 未触及支付`。
 
-## 6. KV/R2
+## 7. KV/R2
 
 - 如有 key 结构或 bucket 路径改动，必须附迁移脚本和回滚步骤。
 - 必须用老数据实测读取。
 - 未触及 KV/R2 文件时，标注 `N/A：diff 未触及 KV/R2`。
 
-## 7. 报告格式
+## 8. 报告格式
 
 只报结论和失败项：
 
@@ -73,7 +79,7 @@ MERGE GATE: FAIL 禁止 merge
 - 需 Wan 人工确认: Pro/kiso/progress 老账号核心路径
 ```
 
-## 8. Merge 规则
+## 9. Merge 规则
 
 - `ALL PASS` 或 `PASS + N/A + 已记录存量问题` 才能 merge。
 - 有本分支引入的 `FAIL` 时禁止 merge。
