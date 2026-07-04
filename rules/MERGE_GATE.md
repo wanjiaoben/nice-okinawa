@@ -1,41 +1,49 @@
 # MERGE_GATE
 
-所有优化分支 merge 到 `main` 前必须逐项执行本验收。禁止带 FAIL merge。
+所有优化分支 merge 到 `main` 前必须逐项执行本验收。禁止带本分支引入的 FAIL merge。
 
 ## 执行范围
 
 - 目标分支与 `main` 的 diff。
 - 受影响仓库的线上 URL、sitemap、canonical、hreflang。
+- Gate 条目按改动类型适用。未触及的系统记 `N/A：本次未触及`，不要求人工补测。
 - 如 diff 触及登录、鉴权、支付、KV/R2、Worker/API、构建产物，必须执行对应专项验收。
+- 区分「本分支引入的回归」与「存量线上问题」：
+  - 本分支引入的回归 = FAIL，禁止 merge。
+  - 存量线上问题不阻塞本分支 merge，但必须自动记录到主站仓库 `audit/ISSUES.md`，包含发现日期、影响范围、证据、后续动作。
 
 ## 1. 兼容性
 
+- 仅当 diff 触及付费产品代码、登录、鉴权、会员状态、题库/词库读取、progress/kiso/pro 路由、Worker/API 或相关构建产物时执行。
 - 用现有老用户账号各 1 个：Pro、kiso、progress 付费账号。
 - 走核心路径：登录 → 取题/取词 → 答题/建岛 → 查看付费内容。
 - 任一 401、404、空数据、付费内容不可见 = FAIL。
-- 无账号或无法自动登录时，标注：`需 Wan 人工确认`，并写明只需确认哪些账号/路径。
+- 未触及付费产品代码的分支，自动记 `N/A：本次未触及付费产品代码`。
+- 触及但无账号或无法自动登录时，标注：`需 Wan 人工确认`，并写明只需确认哪些账号/路径。
 
 ## 2. 鉴权与泄漏
 
+- 仅当 diff 触及鉴权、API、题库/词库、会员逻辑或构建产物时执行免费账号 API 拒绝测试。
 - 免费账号请求 `/api/questions` 的 Pro 内容必须被拒。
-- 前端构建产物 grep 不到答案字段和任何 secret。
+- 所有前端代码或构建产物 grep 不到答案字段和任何 secret。
 - 重点 grep：`answer`、`correctAnswer`、`correct_answer`、`secret`、`apiKey`、`token`、`password`、`client_secret`。
 - 若命中是普通展示文案，报告中注明为非泄漏命中。
 
 ## 3. URL
 
-- 被移动/删除的 URL 必须有 301 到新 URL。
-- sitemap 全量 curl，0 个 4xx/5xx。
-- 任一 sitemap URL 返回 4xx/5xx = FAIL。
+- 本分支移动/删除的 URL 必须有 301 到新 URL。
+- 受影响站点 sitemap 全量 curl。
+- 本分支新增或修改的 sitemap URL 返回 4xx/5xx = FAIL。
+- 未被本分支修改、但线上已存在的 sitemap URL 返回 4xx/5xx，记为存量线上问题，写入 `audit/ISSUES.md`，不阻塞当前分支。
 
 ## 4. SEO
 
-- `sitemap.xml` 与实际页面一致。
+- 受影响站点的 `sitemap.xml` 与实际页面一致。
 - 每语言至少抽 1 页验证：
   - 自指 canonical 正确。
   - hreflang 互指完整。
   - `x-default` 指向既定默认页。
-- 多语言 sitemap 中列出的语言页必须线上可访问。
+- 本分支新增或修改的多语言 sitemap URL 必须线上可访问。存量不可访问 URL 写入 `audit/ISSUES.md`。
 
 ## 5. 支付
 
@@ -67,6 +75,6 @@ MERGE GATE: FAIL 禁止 merge
 
 ## 8. Merge 规则
 
-- `ALL PASS` 才能 merge。
-- 有 `FAIL` 时禁止 merge。
+- `ALL PASS` 或 `PASS + N/A + 已记录存量问题` 才能 merge。
+- 有本分支引入的 `FAIL` 时禁止 merge。
 - `需 Wan 人工确认` 不等于 PASS；必须由 Wan 确认后再更新报告结论。
