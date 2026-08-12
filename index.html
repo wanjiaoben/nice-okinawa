@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>沖縄インバウンド観光・日本語教育・AI支援｜Nice Okinawa（CatalinaJapan株式会社）</title>
+<title>沖縄観光・日本語教育・通訳・中古車輸出｜Nice Okinawa（CatalinaJapan株式会社）</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -508,10 +508,28 @@ section { padding: 100px 60px; }
 
 .sites-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 36px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.site-group {
+  text-align: left;
+}
+
+.site-group-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px;
+  color: var(--ocean);
+  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+}
+
+.site-group-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .site-card {
@@ -553,6 +571,25 @@ section { padding: 100px 60px; }
   margin-bottom: 10px;
 }
 .site-desc { font-size: 12px; line-height: 1.7; color: var(--muted); }
+.site-sub-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--reef);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42,107,124,0.35);
+  padding-bottom: 3px;
+}
+.site-sub-link:hover { color: var(--coral); border-color: var(--coral); }
+.site-kerama-link {
+  align-self: start;
+  margin-top: 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(42,107,124,0.2);
+  background: rgba(255,255,255,0.72);
+}
 
 /* ── CONTACT ── */
 .contact-section {
@@ -841,7 +878,7 @@ footer {
   }
 
   .services-grid,
-  .sites-grid {
+  .site-group-cards {
     grid-template-columns: 1fr;
   }
 
@@ -853,8 +890,8 @@ footer {
   .float-nav-btn { width: 50px; font-size: .62rem; padding: .45rem .5rem; }
 }
 </style>
-<meta name="description" content="沖縄・那覇のCatalinaJapan株式会社が運営するNice Okinawa。2009年創業。観光インバウンド、シュノーケリングツアー、BJT日本語試験対策、職場日本語コーチング、AIカスタマーサービス支援を中国語・日本語・英語で提供。お気軽にお問い合わせください。">
-<meta name="keywords" content="沖縄 観光,沖縄 インバウンド,沖縄 通訳,沖縄 シュノーケリング,BJT 対策,日本語 オンライン,職場 日本語,沖縄 AI カスタマーサービス,那覇,CatalinaJapan">
+<meta name="description" content="沖縄・那覇のCatalinaJapan株式会社が運営するNice Okinawa。2009年創業。観光インバウンド、シュノーケリングツアー、BJT日本語試験対策、職場日本語コーチング、通訳同行、中古車輸出を中国語・日本語・英語で提供。お気軽にお問い合わせください。">
+<meta name="keywords" content="沖縄 観光,沖縄 インバウンド,沖縄 通訳,沖縄 シュノーケリング,BJT 対策,日本語 オンライン,職場 日本語,沖縄 中古車輸出,那覇,CatalinaJapan">
 <meta name="author" content="CatalinaJapan株式会社">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0d2233">
@@ -866,19 +903,74 @@ footer {
 <!-- Open Graph / Twitter -->
 <meta property="og:site_name" content="Nice Okinawa">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="沖縄インバウンド観光・日本語教育・AI支援｜Nice Okinawa">
-<meta property="og:description" content="2009年創業。沖縄・那覇を拠点に、観光インバウンド・シュノーケリング・BJT日本語試験対策・AIカスタマーサービス支援を中国語/日本語/英語で提供するCatalinaJapan株式会社。">
+<meta property="og:title" content="沖縄観光・日本語教育・通訳・中古車輸出｜Nice Okinawa">
+<meta property="og:description" content="2009年創業。沖縄・那覇を拠点に、観光インバウンド・シュノーケリング・BJT日本語試験対策・通訳同行・中古車輸出を中国語/日本語/英語で提供するCatalinaJapan株式会社。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nice.okinawa/">
 <meta property="og:image" content="https://nice.okinawa/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="沖縄インバウンド観光・日本語教育・AI支援｜Nice Okinawa">
-<meta name="twitter:description" content="沖縄・那覇のCatalinaJapan株式会社。観光・日本語教育・AI支援を中国語/日本語/英語で。">
+<meta name="twitter:title" content="沖縄観光・日本語教育・通訳・中古車輸出｜Nice Okinawa">
+<meta name="twitter:description" content="沖縄・那覇のCatalinaJapan株式会社。観光・日本語教育・通訳・中古車輸出を中国語/日本語/英語で。">
 <meta name="twitter:image" content="https://nice.okinawa/og-cover.jpg">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Nice Okinawa（CatalinaJapan株式会社）","legalName":"CatalinaJapan株式会社","description":"沖縄・那覇を拠点に、観光インバウンド、シュノーケリングツアー、BJT日本語試験対策、職場日本語コーチング、AIカスタマーサービス支援を中国語・日本語・英語で提供。","url":"https://nice.okinawa/","image":"https://nice.okinawa/og-cover.jpg","foundingDate":"2009","email":"info@nice.okinawa","knowsLanguage":["ja","zh","en"],"areaServed":{"@type":"AdministrativeArea","name":"沖縄県 / Okinawa"},"address":{"@type":"PostalAddress","addressLocality":"那覇市","addressRegion":"沖縄県","addressCountry":"JP"},"geo":{"@type":"GeoCoordinates","latitude":26.2124,"longitude":127.6809},"sameAs":["https://bjt.nice.okinawa","https://snorkel.nice.okinawa","https://fishing.nice.okinawa"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"沖縄観光インバウンド・通訳サポート"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"シュノーケリングツアー（游爽浮潜）"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"BJT日本語試験対策"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"職場日本語コーチング"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AIカスタマーサービス支援"}}]}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nice Okinawa",
+  "legalName": "CatalinaJapan株式会社",
+  "description": "沖縄・那覇を拠点に、観光インバウンド、シュノーケリングツアー、BJT日本語試験対策、職場日本語コーチング、通訳同行、中古車輸出を中国語・日本語・英語で提供。",
+  "url": "https://nice.okinawa/",
+  "image": "https://nice.okinawa/og-cover.jpg",
+  "foundingDate": "2009",
+  "email": "info@nice.okinawa",
+  "knowsLanguage": ["ja", "zh", "en"],
+  "areaServed": {"@type": "AdministrativeArea", "name": "沖縄県 / Okinawa"},
+  "address": {"@type": "PostalAddress", "addressLocality": "那覇市", "addressRegion": "沖縄県", "addressCountry": "JP"},
+  "sameAs": [
+    "https://snorkel.nice.okinawa/",
+    "https://fishing.nice.okinawa/",
+    "https://activity.nice.okinawa/",
+    "https://golf.nice.okinawa/",
+    "https://rental.nice.okinawa/",
+    "https://bjt.nice.okinawa/",
+    "https://kiso.nice.okinawa/",
+    "https://progress.nice.okinawa/",
+    "https://translation.nice.okinawa/",
+    "https://japanusedcars.nice.okinawa/"
+  ],
+  "hasOfferCatalog": [
+    {
+      "@type": "OfferCatalog",
+      "name": "在冲绳玩什么",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Okinawa snorkeling tours", "url": "https://snorkel.nice.okinawa/", "description": "Kerama waters, Blue Cave and private charter snorkeling tour planning in Okinawa."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Okinawa fishing charters", "url": "https://fishing.nice.okinawa/", "description": "Private fishing charters from Chatan and sea fishing experiences from Kadena Fishing Port."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Okinawa activity booking", "url": "https://activity.nice.okinawa/", "description": "Okinawa activity booking for snorkeling, fishing charters, golf, rental cars and business translation."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Okinawa golf guide", "url": "https://golf.nice.okinawa/", "description": "Okinawa golf guide covering courses, practice ranges, golf shops, lessons and travel tips."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Okinawa rental", "url": "https://rental.nice.okinawa/", "description": "Okinawa car rental from JPY 7,000 per day, plus snorkel gear, BBQ sets, fishing equipment and travel items."}}
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "学日语",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "BJT business Japanese preparation", "url": "https://bjt.nice.okinawa/", "description": "BJT business Japanese preparation with online mock training, test mode, PATTO vocabulary and original BJT教材."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Japanese foundations", "url": "https://kiso.nice.okinawa/", "description": "Japanese foundation training for particles, transitive and intransitive verbs, giving and receiving expressions, and sentence connection."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Progress Japanese memory engine", "url": "https://progress.nice.okinawa/", "description": "Japanese learning memory engine powered by FSRS-5 spaced repetition for BJT preparation, vocabulary review and PATTO audio."}}
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "其他业务",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business translation and interpretation in Okinawa", "url": "https://translation.nice.okinawa/", "description": "Chinese, Japanese and English business translation and interpretation in Okinawa, including notarized document translation from JPY 5,500 per document and interpreter attendance from JPY 11,000 per hour."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Japan used car export", "url": "https://japanusedcars.nice.okinawa/", "description": "Okinawa used car export and local purchase support for Taiwan, Southeast Asia, the Middle East and Europe, with export documents and shipping coordination."}}
+      ]
+    }
+  ]
+}</script>
 <style id="nice-screenshot-mark-style">
 .nice-screenshot-mark {
   position: fixed;
@@ -946,7 +1038,7 @@ footer {
     </h1>
     <p class="hero-subtitle">沖縄と世界をつなぐ、あなたの島の窓口</p>
     <p class="hero-desc">
-      2009年の創業以来、観光・日本語教育・AI活用支援など<br>
+      2009年の創業以来、観光・日本語教育・通訳・中古車輸出など<br>
       多様なサービスで、世界中の人々と沖縄の架け橋を担ってきました。
     </p>
     <div class="hero-btns">
@@ -985,14 +1077,14 @@ footer {
     <div class="section-eyebrow">About Us</div>
     <h2 class="section-title">沖縄を、<em>世界へ。</em></h2>
     <div class="about-body">
-      <p>CatalinaJapan株式会社は2009年に設立。沖縄を拠点に、観光インバウンド・日本語教育・AIカスタマーサービス支援など、多言語・多分野にわたるサービスを展開しています。</p>
+      <p>CatalinaJapan株式会社は2009年に設立。沖縄を拠点に、観光インバウンド・日本語教育・通訳・中古車輸出など、多言語・多分野にわたるサービスを展開しています。</p>
       <p>中国語・日本語・英語の三言語を軸に、世界中のお客様と沖縄の魅力をつなぐ架け橋として、地域に根ざした事業を続けています。</p>
       <p>「自分の田畑を自分で耕す」という精神のもと、オンライン・オフライン双方で、誠実なサービスをお届けしています。</p>
     </div>
     <div class="about-tags">
       <span class="tag">観光インバウンド</span>
       <span class="tag">日本語教育</span>
-      <span class="tag">AI支援</span>
+      <span class="tag">通訳</span>
       <span class="tag">多言語対応</span>
       <span class="tag">マリンスポーツ</span>
     </div>
@@ -1004,7 +1096,7 @@ footer {
   <div class="services-header reveal">
     <div class="section-eyebrow">Services</div>
     <h2 class="section-title">私たちの<em>サービス</em></h2>
-    <p class="section-lead" style="margin:0 auto;">観光から教育、AI活用まで。沖縄を中心に、多角的なサポートを提供しています。</p>
+    <p class="section-lead" style="margin:0 auto;">観光から教育、通訳、中古車輸出まで。沖縄を中心に、多角的なサポートを提供しています。</p>
   </div>
   <div class="services-grid">
     <div class="service-card reveal">
@@ -1028,9 +1120,14 @@ footer {
       <p class="svc-body">日本企業で働く外国人向けに、ビジネス敬語・メール文書・会議対応などを実践的に指導します。</p>
     </div>
     <div class="service-card reveal">
-      <span class="svc-icon">🤖</span>
-      <div class="svc-title">AIカスタマーサービス支援</div>
-      <p class="svc-body">沖縄の中小企業向けに、AI活用による顧客対応の自動化・効率化をサポートします。</p>
+      <span class="svc-icon">🗣️</span>
+      <div class="svc-title">通訳同行</div>
+      <p class="svc-body">法律事務所での面談、口座開設、役所手続、商談、契約などに通訳同行。料金は¥11,000/h。</p>
+    </div>
+    <div class="service-card reveal">
+      <span class="svc-icon">🚗</span>
+      <div class="svc-title">中古車輸出</div>
+      <p class="svc-body">沖縄の中古車を台湾・東南アジア・中東・欧米へ輸出。輸出書類一式と船積み手配に対応します。</p>
     </div>
     <div class="service-card reveal">
       <span class="svc-icon">📚</span>
@@ -1079,8 +1176,8 @@ footer {
       <div class="tl-item">
         <div class="tl-year">2026</div>
         <div class="tl-content">
-          <div class="tl-title">AI支援サービス 開始</div>
-          <div class="tl-desc">沖縄中小企業向けAIカスタマーサービス導入支援を展開中。</div>
+          <div class="tl-title">BJT オンライン学習プラットフォーム 本格運用開始</div>
+          <div class="tl-desc">多言語対応の模擬試験・語彙学習・敬語トレーニングをオンラインで提供。</div>
         </div>
       </div>
     </div>
@@ -1099,24 +1196,82 @@ footer {
     <p class="section-lead" style="margin:0 auto; color: var(--muted);">各サービスの専用サイトをご覧ください。</p>
   </div>
   <div class="sites-grid">
-    <a href="https://bjt.nice.okinawa" class="site-card reveal">
-      <span class="site-icon">🎌</span>
-      <div class="site-name">bjt.nice.okinawa</div>
-      <div class="site-title">BJT日本語試験対策</div>
-      <p class="site-desc">会員制学習プラットフォーム。模擬試験・単語学習・添削指導。</p>
-    </a>
-    <a href="https://snorkel.nice.okinawa" class="site-card reveal">
-      <span class="site-icon">🤿</span>
-      <div class="site-name">snorkel.nice.okinawa</div>
-      <div class="site-title">游爽浮潜 シュノーケル</div>
-      <p class="site-desc">宜野湾発のシュノーケリングツアー。日中英三言語対応。</p>
-    </a>
-    <a href="https://fishing.nice.okinawa" class="site-card reveal">
-      <span class="site-icon">🎣</span>
-      <div class="site-name">fishing.nice.okinawa</div>
-      <div class="site-title">沖縄フィッシング</div>
-      <p class="site-desc">北谷・嘉手納発。体験釣りから本格GTフィッシングまで。</p>
-    </a>
+    <div class="site-group">
+      <h3 class="site-group-title">在冲绳玩什么</h3>
+      <div class="site-group-cards">
+        <a href="https://snorkel.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">🤿</span>
+          <div class="site-name">snorkel.nice.okinawa</div>
+          <div class="site-title">ケラマ・チービシシュノーケリング</div>
+          <p class="site-desc">宜野湾マリーナ集合、船で約30〜40分のケラマ海域へ。標準プランは1名19,830円〜。</p>
+        </a>
+        <a href="/ja/kerama-snorkeling/" class="site-sub-link site-kerama-link reveal">Kerama Chibishi 半日浮潜详情</a>
+        <a href="https://fishing.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">🎣</span>
+          <div class="site-name">fishing.nice.okinawa</div>
+          <div class="site-title">沖縄フィッシングチャーター</div>
+          <p class="site-desc">北谷・嘉手納・泡瀬から出船、初心者向け2時間体験からGT・マグロ・カンパチ貸切まで選べます。</p>
+        </a>
+        <a href="https://activity.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">🏝️</span>
+          <div class="site-name">activity.nice.okinawa</div>
+          <div class="site-title">沖縄旅行の予約相談</div>
+          <p class="site-desc">複数の予定をまとめて組みたい時や、何を選べばいいか迷う時に相談できます。</p>
+        </a>
+        <a href="https://golf.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">⛳</span>
+          <div class="site-name">golf.nice.okinawa</div>
+          <div class="site-title">沖縄ゴルフガイド</div>
+          <p class="site-desc">沖縄の18ホール・9ホール、屋内練習場、中古ゴルフ店、レッスンと旅行Tipsを探せます。</p>
+        </a>
+        <a href="https://rental.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">🚐</span>
+          <div class="site-name">rental.nice.okinawa</div>
+          <div class="site-title">沖縄レンタル</div>
+          <p class="site-desc">レンタカーは1日¥7,000〜、シュノーケル・BBQ・釣り道具などもホテル・港へ配送できます。</p>
+        </a>
+      </div>
+    </div>
+    <div class="site-group">
+      <h3 class="site-group-title">学日语</h3>
+      <div class="site-group-cards">
+        <a href="https://bjt.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">🎌</span>
+          <div class="site-name">bjt.nice.okinawa</div>
+          <div class="site-title">BJT対策オンライン模試</div>
+          <p class="site-desc">BJT Proは1010+問、4セット模試、PATTO語彙、敬語方向トレーニングを含み、10日2,610円から。</p>
+        </a>
+        <a href="https://kiso.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">📘</span>
+          <div class="site-name">kiso.nice.okinawa</div>
+          <div class="site-title">中国語話者の日本語基礎</div>
+          <p class="site-desc">助詞1000問・自他動詞56問・授受328問・接続200問を無料公開中、BJT/JLPTへ進む土台を固めます。</p>
+        </a>
+        <a href="https://progress.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">📈</span>
+          <div class="site-name">progress.nice.okinawa</div>
+          <div class="site-title">Progress 日本語記憶エンジン</div>
+          <p class="site-desc">FSRS-5の間隔反復で、BJT語彙・単語カード・選択問題・書き取り・PATTO音声を復習できます。</p>
+        </a>
+      </div>
+    </div>
+    <div class="site-group">
+      <h3 class="site-group-title">其他业务</h3>
+      <div class="site-group-cards">
+        <a href="https://translation.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">📝</span>
+          <div class="site-name">translation.nice.okinawa</div>
+          <div class="site-title">沖縄法務・ビジネス翻訳</div>
+          <p class="site-desc">公証書類は5,500円/通〜、契約・定款翻訳は30円/字〜、法律事務所面談の通訳同行は11,000円/h。</p>
+        </a>
+        <a href="https://japanusedcars.nice.okinawa" class="site-card reveal">
+          <span class="site-icon">🚗</span>
+          <div class="site-name">japanusedcars.nice.okinawa</div>
+          <div class="site-title">沖縄中古車・輸出サポート</div>
+          <p class="site-desc">右ハンドル中古車の購入相談、書類手続き、船積み調整、沖縄での現地販売に対応します。</p>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1174,7 +1329,6 @@ footer {
         <option>シュノーケリングツアー</option>
         <option>BJT日本語試験対策</option>
         <option>職場日本語コーチング</option>
-        <option>AI支援サービス</option>
         <option>その他</option>
       </select>
     </div>
