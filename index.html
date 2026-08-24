@@ -591,6 +591,67 @@ section { padding: 100px 60px; }
   background: rgba(255,255,255,0.72);
 }
 
+/* ── TRAVEL TIPS ── */
+.tips-section {
+  background: var(--foam);
+  text-align: center;
+}
+.tips-header {
+  max-width: 620px;
+  margin: 0 auto 42px;
+}
+.tips-header .section-eyebrow { justify-content: center; }
+.tips-header .section-eyebrow::before { display: none; }
+.tips-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 760px;
+  margin: 0 auto;
+}
+.tips-card {
+  display: block;
+  text-align: left;
+  border: 1px solid rgba(42,107,124,0.2);
+  border-radius: 4px;
+  background: var(--white);
+  padding: 36px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.tips-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--sand);
+}
+.tips-card:hover {
+  border-color: var(--reef);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26,58,74,0.12);
+}
+.tips-kicker {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--reef);
+  margin-bottom: 10px;
+}
+.tips-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--ocean);
+  margin-bottom: 12px;
+}
+.tips-desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
 /* ── CONTACT ── */
 .contact-section {
   background: var(--ocean);
@@ -1272,6 +1333,22 @@ footer {
         </a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- TRAVEL TIPS -->
+<section class="tips-section" id="travel-tips">
+  <div class="tips-header">
+    <div class="section-eyebrow">Explore Okinawa / Travel Tips</div>
+    <h2 class="section-title">Visitor Guides</h2>
+    <p class="section-lead">Practical notes for safer, easier travel in Okinawa.</p>
+  </div>
+  <div class="tips-grid">
+    <a href="/en/travel-tips/okinawa-typhoon-travel-safety/" class="tips-card reveal">
+      <div class="tips-kicker">Safety Guide</div>
+      <div class="tips-title">What to Do If a Typhoon Affects Your Trip to Okinawa</div>
+      <p class="tips-desc">How to check official warnings, stay indoors, handle disrupted plans and find emergency contacts in Japan.</p>
+    </a>
   </div>
 </section>
 

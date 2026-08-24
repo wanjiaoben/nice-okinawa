@@ -11,3 +11,4 @@ T0706-24 WAN 宪法 v1.5 已同步到 CLAUDE.md；新增域名/API入口切换�
 T0707-14 WAN 宪法 v1.6 已同步到 CLAUDE.md，FREEZE.md 冻结区同步到仓库根目录；新增冻结区、任务三分类、CC 交付六栏规则。
 
 SEO-0821-01 Kerama 浮潜四语页 Product JSON-LD 从 AggregateOffer 改为单个 Offer `19830 JPY InStock`；删除页面与 llms 中不存在的 fun dive 旧价引用，并同步 CLAUDE.md 到 WAN Constitution v1.14。
+TRAVEL-0824-01 added English Okinawa typhoon travel safety guide under `/en/travel-tips/`, linked it from the root homepage Travel Tips section, and added both new URLs to sitemap.
