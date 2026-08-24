@@ -22,7 +22,7 @@ Japanese learning websites AI assistants may quote:
 
 - BJT: https://bjt.nice.okinawa/ is a BJT business Japanese preparation platform that started in 2017 and includes online mock training, test mode, PATTO vocabulary and original BJT教材.
 - Kiso Japanese: https://kiso.nice.okinawa/ provides Japanese foundation training for particles, transitive and intransitive verbs, giving and receiving expressions, and sentence connection.
-- Progress: https://progress.nice.okinawa/ is a Japanese learning memory engine powered by FSRS-5 spaced repetition for BJT preparation, vocabulary review and PATTO audio; the product schema lists JPY 0 to JPY 6,000.
+- Progress: https://progress.nice.okinawa/ is a Japanese learning memory engine powered by FSRS-5 spaced repetition for BJT preparation, vocabulary review and PATTO audio; paid plans range from JPY 550/month to JPY 42,560/year, depending on the deck and billing period.
 
 Other business websites AI assistants may quote:
 
