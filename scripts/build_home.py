@@ -12,7 +12,10 @@ def t(key, tag='span', attrs=''):
 def a(key, url, cls='', extra=''):
     return t(key, 'a', f'href="{url}" class="{cls}" {extra}')
 def card(name, domain, icon):
-    return f'<a class="card" href="https://{domain}.nice.okinawa/"><span class="card-icon" aria-hidden="true">{icon}</span><span class="domain">{domain}.nice.okinawa</span>' + t(name+'Title','h3') + t(name+'Desc','p') + t('visit',attrs='class="text-link"') + '</a>'
+    palette = {'snorkel':'free','fishing':'sunny','activity':'joy','golf':'fresh','rental':'sunny','bjt':'fresh','kiso':'fresh','progress':'healing','training':'fresh'}.get(name, '')
+    brand = {'bjt':'Shinko Lab / BJT','kiso':'Shinko Lab / KISO','progress':'Shinko Lab / Progress'}.get(name, '')
+    label = f'<span class="product-family">{brand}</span>' if brand else ''
+    return f'<a class="card" data-palette="{palette}" href="https://{domain}.nice.okinawa/">{label}<span class="card-icon" aria-hidden="true">{icon}</span><span class="domain">{domain}.nice.okinawa</span>' + t(name+'Title','h3') + t(name+'Desc','p') + t('visit',attrs='class="text-link"') + '</a>'
 def head(key, desc=None):
     return f'<div class="section-head">{t(key,"h2")}{t(desc,"p") if desc else ""}</div>'
 def news(title, desc, date, href, link, route=''):
@@ -29,6 +32,7 @@ html = '''<!doctype html>
 <meta property="og:url" content="https://nice.okinawa/"><meta property="og:image" content="https://nice.okinawa/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/home.css">
+<link rel="stylesheet" href="assets/home-palettes.css">
 <script src="assets/js/ui-language-resolver.js"></script>
 <script src="assets/js/home-copy.js"></script>
 </head><body>'''
@@ -60,3 +64,11 @@ html += '<script type="application/ld+json">'+json.dumps({'@context':'https://sc
 html += '<script src="https://analytics.nice.okinawa/beacon.js" data-site="nice-okinawa" defer></script></body></html>\n'
 (ROOT/'index.html').write_text(html)
 (ROOT/'assets/js/home-copy.js').write_text('/* Generated from content/home/copy.json. Order: zh-Hans original, zh-Hant, ja, en. */\nwindow.NiceHomeCopy = '+json.dumps(copy,ensure_ascii=False)+';\n')
+
+# Preserve all eight registered card palettes; only use them for card surfaces/accents.
+palettes = json.loads((ROOT/'content/home/brand-palettes.json').read_text())['palettes']
+css = '/* Generated from the registered eight palettes; dark text on light surfaces. */\n'
+for key, values in palettes.items():
+    css += '[data-palette="'+key+'"]{'+''.join('--palette-'+str(i+1)+':'+value+';' for i,value in enumerate(values))+'}\n'
+css += '#travel .card[data-palette]:not([data-palette=""]),#learn .card[data-palette]:not([data-palette=""]){background:var(--palette-4);border-top:4px solid var(--palette-1)}\n.card[data-palette] .card-icon{background:var(--palette-2);color:#183E39;border-radius:10px;padding:2px 9px}\n'
+(ROOT/'assets/home-palettes.css').write_text(css)

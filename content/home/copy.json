@@ -522,10 +522,10 @@
     "This opens your email app or WhatsApp with your message filled in. Confirm sending in that app."
   ],
   "required": [
-    "请填写姓名、有效邮箱和咨询内容。",
-    "請填寫姓名、有效郵件和諮詢內容。",
-    "お名前・有効なメールアドレス・ご相談内容を入力してください。",
-    "Please enter your name, a valid email and your message."
+    "错误：请填写姓名、有效邮箱和咨询内容。",
+    "錯誤：請填寫姓名、有效郵件和諮詢內容。",
+    "エラー：お名前・有効なメールアドレス・ご相談内容を入力してください。",
+    "Error: Please enter your name, a valid email and your message."
   ],
   "opened": [
     "已请求打开应用；请确认并发送。",

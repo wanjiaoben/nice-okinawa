@@ -15,3 +15,5 @@ TRAVEL-0824-01 added English Okinawa typhoon travel safety guide under `/en/trav
 M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新闻稿与首页News入口；简中母版入仓，待Wan review后发布；对支付、付费学习、预授权三项零影响。
 
 - M1104-02: 首页四语与三业务入口视觉探索候选，Mini 浏览器回归通过；等待任务4视觉方向与 Review 首页发布契约，未合并、未发布。
+
+- M1104-02 reference alignment: 已读取 Library 十页视觉方案 v2，补齐32色、Main学习绿/海天蓝、无衬线与手机单栏；更新现有Review样张，未入主队列，未推送或发布。

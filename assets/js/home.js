@@ -38,15 +38,16 @@
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   function send(channel) {
+    status.classList.remove('error');
     if (!form.checkValidity()) {
-      status.textContent = text('required');
+      status.classList.add('error'); status.textContent = text('required');
       form.querySelector(':invalid').focus();
       return;
     }
     const name = document.getElementById('cf-name').value.trim();
     const email = document.getElementById('cf-email').value.trim();
     const message = document.getElementById('cf-message').value.trim();
-    if (!name || !message) { status.textContent = text('required'); return; }
+    if (!name || !message) { status.classList.add('error'); status.textContent = text('required'); return; }
     const key = document.getElementById('cf-type').value;
     const subject = key ? text(key) : 'Nice Okinawa';
     const body = `${text('name')}: ${name}\n${text('email')}: ${email}\n${text('topic')}: ${subject}\n\n${message}`;
