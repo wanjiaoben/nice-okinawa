@@ -26,8 +26,12 @@
 - `WAN_RULES_LOCAL_PATH=... scripts/check_wan_constitution.sh` 通过 v1.19；`git diff --check` 通过。
 - 桌面与手机截图已在 Mini 目检，证据保存在任务工作区的 evidence 目录。
 
+- 实际 Review 路由已跑同一套八组浏览器回归；Review 包装页四语/设备切换通过。13 个现有业务及新闻外部链接均返回 200。
+- Review 本机入口与客户页均 200；外网入口 302 跳转现有 Access 登录，未绕过登录、未改访问权限。
+
 ## 风险点
 - 这是探索版，不是批准版；等待任务 4 的视觉规定讨论。
+- GitHub 候选分支 push 被自动审批明确拒绝（未执行）：审核认为现有授权覆盖 Review 预览，未明确覆盖外部仓库推送。未重试，未创建 PR；需 Wan 明确同意推送此候选分支。
 - 正式托管仍是 GitHub Pages 的 main 根目录，未建立 Cloudflare Pages preview。本次 Review 为既有 `/tasks/` 静态候选，不伪造 Pages deployment。
 - Review 的 `sites/nice.okinawa.json` 当前 repo=null、publisher_enabled=false、supported_languages=[en]；首页更新不具备已验证的一键发布契约。本任务不修改此注册，不绕过文章发布门禁。
 - 后续新闻发布器需与首页母版/词典同步，不能只注入未翻译卡片后再运行构建器，否则会覆盖新卡片或重新引入混语。任务 3 需在集成前确认此契约。合并前必须重查 main / 最新新闻，保留近期变更。
