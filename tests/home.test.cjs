@@ -29,6 +29,10 @@ console.log('PASS: resolver precedence, mappings, blocked storage, copy complete
 
 assert(html.includes('id="history-credentials"'));
 for(const key of ["historyStart","credentialDealer","credentialTravel","credentialTeacher"]) assert(html.includes(`data-i18n="${key}"`));
-assert(!html.includes("foundingDate"));
+const org = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
+assert.equal(org.foundingDate, '2015');
+assert(copy.historyStart.every(s=>s.includes('2015')));
+assert(copy.historyArrival.every(s=>s.includes('2009')));
+for(const key of ['credentialDealer','credentialTravel','credentialTeacher']) assert(copy[key].every(s=>/待核|確認中|verify/.test(s)));
 assert(!html.includes("SINCE 2009"));
-console.log("PASS history/credentials are present as pending review, with no asserted founding date in structured data.");
+console.log("PASS 2015 company founding and 2009 personal arrival remain distinct; three credentials remain unverified.");

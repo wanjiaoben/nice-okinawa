@@ -354,10 +354,10 @@
     "Rooted in Okinawa. Connected to the world."
   ],
   "aboutBody": [
-    "CatalinaJapan 株式会社以冲绳那霸为据点，开展旅游、日语教育、翻译口译与中古车出口业务。",
-    "CatalinaJapan 株式會社以沖繩那霸為據點，開展旅遊、日語教育、翻譯口譯與中古車出口業務。",
-    "CatalinaJapan株式会社は沖縄・那覇を拠点に、観光・日本語教育・翻訳通訳・中古車輸出に取り組んでいます。",
-    "CatalinaJapan is based in Naha, Okinawa, working across travel, Japanese education, translation, interpreting and used-car exports."
+    "CatalinaJapan 株式会社成立于 2015 年，以冲绳那霸为据点，开展旅游、日语教育、翻译口译与中古车出口业务。",
+    "CatalinaJapan 株式會社成立於 2015 年，以沖繩那霸為據點，開展旅遊、日語教育、翻譯口譯與中古車出口業務。",
+    "CatalinaJapan株式会社は2015年設立。沖縄・那覇を拠点に、観光・日本語教育・翻訳通訳・中古車輸出に取り組んでいます。",
+    "Established in 2015, CatalinaJapan is based in Naha, Okinawa, working across travel, Japanese education, translation, interpreting and used-car exports."
   ],
   "aboutBody2": [
     "以中文、日文、英文沟通，让旅行、学习与跨境合作有一个清晰的起点。",
@@ -366,10 +366,10 @@
     "We work in Chinese, Japanese and English to support travel, learning and cross-border cooperation."
   ],
   "founded": [
-    "公司与业务起始年份待核",
-    "公司與業務起始年份待核",
-    "会社・事業の開始年は確認中",
-    "Company and business start dates under review"
+    "公司成立年份",
+    "公司成立年份",
+    "会社設立年",
+    "Company establishment year"
   ],
   "base": [
     "那霸",
@@ -390,10 +390,10 @@
     "Our story so far"
   ],
   "history1": [
-    "创立与业务起点：年份待核。",
-    "創立與業務起點：年份待核。",
-    "設立・事業開始：年を確認中。",
-    "Company formation and business beginnings: dates under review."
+    "2015 · CatalinaJapan 株式会社成立。",
+    "2015 · CatalinaJapan 株式會社成立。",
+    "2015 · CatalinaJapan株式会社を設立。",
+    "2015 · CatalinaJapan was established."
   ],
   "history2": [
     "2017 · 开设线上日语教室。",
@@ -636,16 +636,16 @@
     "Based in Okinawa, connecting travel, Japanese learning and cross-border business."
   ],
   "historyStart": [
-    "2015 · 业务起点待核",
-    "2015 · 業務起點待核",
-    "2015 · 事業開始年を確認中",
-    "2015 · Start date to be confirmed"
+    "2015 · 公司成立",
+    "2015 · 公司成立",
+    "2015 · 会社設立",
+    "2015 · Company established"
   ],
   "historyStartNote": [
-    "开始年份及对应业务待确认。",
-    "開始年份及對應業務待確認。",
-    "開始年と対象事業を確認中です。",
-    "The year and corresponding business are being checked."
+    "2009 年来到冲绳（个人经历）。",
+    "2009 年來到沖繩（個人經歷）。",
+    "2009年に沖縄へ（個人の歩み）。",
+    "Arrival in Okinawa in 2009 (personal history)."
   ],
   "credentialDealer": [
     "古物商 · 待核",
@@ -684,9 +684,15 @@
     "Qualification name and holder to be verified."
   ],
   "credentialsPending": [
-    "此栏为待核资料，不作为已取得许可或资格的声明。",
-    "此欄為待核資料，不作為已取得許可或資格的聲明。",
-    "確認中の情報です。許可・資格の取得を表明するものではありません。",
-    "These details are under review and do not claim verified permits or qualifications."
+    "历史年份已确认；三项许可与资格的正式名称、名义人仍待核对。",
+    "歷史年份已確認；三項許可與資格的正式名稱、名義人仍待核對。",
+    "沿革の年は確認済みです。3項目の許可・資格の正式名称と名義人は引き続き確認中です。",
+    "The historical dates are confirmed; formal names and holders of the three permits or qualifications remain under review."
+  ],
+  "historyArrival": [
+    "2009 · 来到冲绳（个人经历）。",
+    "2009 · 來到沖繩（個人經歷）。",
+    "2009 · 沖縄へ（個人の歩み）。",
+    "2009 · Arrival in Okinawa (personal history)."
   ]
 }
