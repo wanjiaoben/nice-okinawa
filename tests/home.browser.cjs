@@ -19,7 +19,7 @@ fs.mkdirSync(output,{recursive:true});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${width}/${locale} overflow`);
     assert.equal(await page.locator('#news .tips-card').count(),3);
     assert.equal(await page.locator('#travel .cards > a').count(),5);
-    assert.equal(await page.locator('.gateway a').count(),3);
+    assert.equal(await page.locator('.gateway-card').count(),3);
     for(const link of await page.locator('a[href^="#"]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')))) assert(await page.locator(link).count(),link);
     const routes=await page.locator('[data-route]').evaluateAll(nodes=>nodes.map(n=>n.href));
     for(const url of routes) assert.equal((await page.request.get(url)).status(),200,url);

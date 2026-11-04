@@ -42,16 +42,16 @@
     "NAHA · OKINAWA · JAPAN"
   ],
   "heroTitle": [
-    "从冲绳出发，\n连接更大的世界。",
-    "從沖繩出發，\n連接更大的世界。",
-    "沖縄から、\n世界とつながる。",
-    "Your connection\nto Okinawa."
+    "旅行、学习、跨境合作。\n从冲绳开始。",
+    "旅行、學習、跨境合作。\n從沖繩開始。",
+    "旅も、学びも、ビジネスも。\n沖縄から。",
+    "Travel, learning & business.\nStart in Okinawa."
   ],
   "heroDesc": [
-    "在冲绳旅行，学习日语，或开展跨境业务。找到适合你的服务，从这里开始。",
-    "在沖繩旅行，學習日語，或開展跨境業務。找到適合你的服務，從這裡開始。",
-    "沖縄旅行、日本語学習、海外とのビジネス。あなたに合うサービスを、ここから。",
-    "Explore Okinawa, learn Japanese, or connect with business in Japan. Find the right place to begin."
+    "找到你需要的服务，直接进入对应业务主页。",
+    "找到你需要的服務，直接進入對應業務主頁。",
+    "必要なサービスを選んで、各専門サイトへ。",
+    "Choose a service and go straight to its own website."
   ],
   "explore": [
     "找到我的服务",
@@ -556,5 +556,71 @@
     "閱讀全文 →",
     "記事を読む →",
     "Read the story →"
+  ],
+  "entryActivity": [
+    "旅行预约",
+    "旅行預約",
+    "旅行の予約",
+    "Travel booking"
+  ],
+  "entrySnorkel": [
+    "浮潜",
+    "浮潛",
+    "シュノーケリング",
+    "Snorkeling"
+  ],
+  "entryFishing": [
+    "海钓",
+    "海釣",
+    "海釣り",
+    "Fishing"
+  ],
+  "entryGolf": [
+    "高尔夫",
+    "高爾夫",
+    "ゴルフ",
+    "Golf"
+  ],
+  "entryRental": [
+    "租车与用品",
+    "租車與用品",
+    "車・用品レンタル",
+    "Car & gear rental"
+  ],
+  "entryBjt": [
+    "BJT 商务日语",
+    "BJT 商務日語",
+    "BJT日本語",
+    "BJT Japanese"
+  ],
+  "entryKiso": [
+    "KISO 日语基础",
+    "KISO 日語基礎",
+    "KISO 基礎日本語",
+    "KISO foundations"
+  ],
+  "entryProgress": [
+    "Progress 复习",
+    "Progress 複習",
+    "Progress 復習",
+    "Progress review"
+  ],
+  "entryTraining": [
+    "职场培训",
+    "職場培訓",
+    "企業研修",
+    "Workplace training"
+  ],
+  "entryCars": [
+    "中古车主页",
+    "中古車主頁",
+    "中古車サイト",
+    "Used-car homepage"
+  ],
+  "entryTranslation": [
+    "翻译与口译",
+    "翻譯與口譯",
+    "翻訳・通訳",
+    "Translation"
   ]
 }

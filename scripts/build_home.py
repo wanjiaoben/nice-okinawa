@@ -40,10 +40,17 @@ html += a('skip','#main','skip')
 html += '<header class="masthead"><div class="wrap header-inner"><a class="logo" href="#main">Nice <em>Okinawa</em><small>CATALINA JAPAN · SINCE 2009</small></a><nav class="nav">'
 html += ''.join(a(k,v) for k,v in [('navSites','#sites'),('navNews','#news'),('navAbout','#about'),('navContact','#contact')])
 html += '</nav><select id="language" class="language" aria-label="选择语言"><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="ja">日本語</option><option value="en">English</option></select></div></header><main id="main">'
-html += '<section class="hero wrap"><div class="hero-grid"><div class="hero-copy">'+t('eyebrow','p','class="eyebrow"')+t('heroTitle','h1','style="white-space:pre-line"')+t('heroDesc','p')+'<div class="actions">'+a('explore','#sites','button')+a('navContact','#contact','button secondary')+'</div></div>'
-html += '<div class="hero-art"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1000&amp;q=85" alt="" width="1000" height="700" fetchpriority="high">'+t('photo','span','class="photo-caption"')+'</div></div><div class="gateway" id="services">'
-for i,key in enumerate(['travel','learn','business']):
-    html += f'<a href="#{key}"><small>0{i+1}</small>{t(key,"h2")}{t(key+"Short","p")}<span class="arrow" aria-hidden="true">↗</span></a>'
+html += '<section class="hero wrap"><div class="hero-grid"><div class="hero-copy">'+t('eyebrow','p','class="eyebrow"')+t('heroTitle','h1','style="white-space:pre-line"')+'</div><div class="hero-intro">'+t('heroDesc','p')+'<div class="actions">'+a('navContact','#contact','button secondary')+'</div></div></div><div class="gateway" id="services">'
+entries = [
+    ('travel',[('entryActivity','activity'),('entrySnorkel','snorkel'),('entryFishing','fishing'),('entryGolf','golf'),('entryRental','rental')]),
+    ('learn',[('entryKiso','kiso'),('entryBjt','bjt'),('entryProgress','progress'),('entryTraining','training')]),
+    ('business',[('entryCars','japanusedcars'),('entryTranslation','translation')])
+]
+for i,(key,links) in enumerate(entries):
+    html += f'<article class="gateway-card gateway-{key}"><div class="gateway-heading"><small>0{i+1}</small>{t(key,"h2")}</div><div class="gateway-links">'
+    for label,domain in links:
+        html += a(label,'https://'+domain+'.nice.okinawa/','business-entry',f'data-business="{domain}"')
+    html += '</div></article>'
 html += '</div></section><section class="block wrap" id="sites">'+head('servicesTitle','servicesDesc')
 for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing','⌁'),('activity','activity','☀'),('golf','golf','⚑'),('rental','rental','↗')]),('learn',[('bjt','bjt','文'),('kiso','kiso','あ'),('progress','progress','↻'),('training','training','↗')]),('business',[('cars','japanusedcars','↗'),('translation','translation','文')])]:
     html += f'<div class="site-group" id="{group}">' + t(group,'h3','class="group-title"') + '<div class="cards">'
