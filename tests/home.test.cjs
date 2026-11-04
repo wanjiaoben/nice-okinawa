@@ -26,3 +26,9 @@ assert(html.includes('naha-foreign-talent-training-grant-2026'));
 assert(html.includes('okinawa-tourism-h1-2026'));
 assert(!html.includes('site-kerama-link'));
 console.log('PASS: resolver precedence, mappings, blocked storage, copy completeness, news preservation, no page-local detection.');
+
+assert(html.includes('id="history-credentials"'));
+for(const key of ["historyStart","credentialDealer","credentialTravel","credentialTeacher"]) assert(html.includes(`data-i18n="${key}"`));
+assert(!html.includes("foundingDate"));
+assert(!html.includes("SINCE 2009"));
+console.log("PASS history/credentials are present as pending review, with no asserted founding date in structured data.");

@@ -354,10 +354,10 @@
     "Rooted in Okinawa. Connected to the world."
   ],
   "aboutBody": [
-    "CatalinaJapan 株式会社成立于 2009 年，以冲绳那霸为据点，开展旅游、日语教育、翻译口译与中古车出口业务。",
-    "CatalinaJapan 株式會社成立於 2009 年，以沖繩那霸為據點，開展旅遊、日語教育、翻譯口譯與中古車出口業務。",
-    "CatalinaJapan株式会社は2009年設立。沖縄・那覇を拠点に、観光・日本語教育・翻訳通訳・中古車輸出に取り組んでいます。",
-    "Founded in 2009, CatalinaJapan is based in Naha, Okinawa, working across travel, Japanese education, translation, interpreting and used-car exports."
+    "CatalinaJapan 株式会社以冲绳那霸为据点，开展旅游、日语教育、翻译口译与中古车出口业务。",
+    "CatalinaJapan 株式會社以沖繩那霸為據點，開展旅遊、日語教育、翻譯口譯與中古車出口業務。",
+    "CatalinaJapan株式会社は沖縄・那覇を拠点に、観光・日本語教育・翻訳通訳・中古車輸出に取り組んでいます。",
+    "CatalinaJapan is based in Naha, Okinawa, working across travel, Japanese education, translation, interpreting and used-car exports."
   ],
   "aboutBody2": [
     "以中文、日文、英文沟通，让旅行、学习与跨境合作有一个清晰的起点。",
@@ -366,10 +366,10 @@
     "We work in Chinese, Japanese and English to support travel, learning and cross-border cooperation."
   ],
   "founded": [
-    "创立年份",
-    "創立年份",
-    "設立年",
-    "Founded"
+    "公司与业务起始年份待核",
+    "公司與業務起始年份待核",
+    "会社・事業の開始年は確認中",
+    "Company and business start dates under review"
   ],
   "base": [
     "那霸",
@@ -390,10 +390,10 @@
     "Our story so far"
   ],
   "history1": [
-    "2009 · 在那霸成立，开展入境旅游业务。",
-    "2009 · 在那霸成立，開展入境旅遊業務。",
-    "2009 · 那覇で創業、インバウンド観光事業を開始。",
-    "2009 · Established in Naha; inbound travel services began."
+    "创立与业务起点：年份待核。",
+    "創立與業務起點：年份待核。",
+    "設立・事業開始：年を確認中。",
+    "Company formation and business beginnings: dates under review."
   ],
   "history2": [
     "2017 · 开设线上日语教室。",
@@ -546,10 +546,10 @@
     "Please copy this WeChat ID: OkinawaOnline"
   ],
   "footer": [
-    "© 2009–2026 CatalinaJapan 株式会社 · 冲绳，日本",
-    "© 2009–2026 CatalinaJapan 株式會社 · 沖繩，日本",
-    "© 2009–2026 CatalinaJapan株式会社 · 沖縄、日本",
-    "© 2009–2026 CatalinaJapan · Okinawa, Japan"
+    "© 2026 CatalinaJapan 株式会社 · 冲绳，日本",
+    "© 2026 CatalinaJapan 株式會社 · 沖繩，日本",
+    "© 2026 CatalinaJapan株式会社 · 沖縄、日本",
+    "© 2026 CatalinaJapan · Okinawa, Japan"
   ],
   "readTourism": [
     "阅读繁体中文原文 →",
@@ -622,5 +622,71 @@
     "翻譯與口譯",
     "翻訳・通訳",
     "Translation"
+  ],
+  "credentialsTitle": [
+    "我们的历程与资质",
+    "我們的歷程與資質",
+    "歩みと資格について",
+    "Our story & credentials"
+  ],
+  "credentialsIntro": [
+    "扎根冲绳，连接旅行、语言学习与跨境业务。",
+    "扎根沖繩，連接旅行、語言學習與跨境業務。",
+    "沖縄を拠点に、旅・日本語学習・海外とのビジネスをつなぎます。",
+    "Based in Okinawa, connecting travel, Japanese learning and cross-border business."
+  ],
+  "historyStart": [
+    "2015 · 业务起点待核",
+    "2015 · 業務起點待核",
+    "2015 · 事業開始年を確認中",
+    "2015 · Start date to be confirmed"
+  ],
+  "historyStartNote": [
+    "开始年份及对应业务待确认。",
+    "開始年份及對應業務待確認。",
+    "開始年と対象事業を確認中です。",
+    "The year and corresponding business are being checked."
+  ],
+  "credentialDealer": [
+    "古物商 · 待核",
+    "古物商 · 待核",
+    "古物商 · 確認中",
+    "Used-goods dealing · To verify"
+  ],
+  "credentialDealerNote": [
+    "许可名称、持证主体待核对。",
+    "許可名稱、持證主體待核對。",
+    "許可の名称と名義人を確認中。",
+    "Permit name and holder to be verified."
+  ],
+  "credentialTravel": [
+    "旅游手配 · 待核",
+    "旅遊手配 · 待核",
+    "旅行手配 · 確認中",
+    "Travel arrangements · To verify"
+  ],
+  "credentialTravelNote": [
+    "正式登记类别与主体待核对。",
+    "正式登記類別與主體待核對。",
+    "正式な登録区分と名義人を確認中。",
+    "Registration category and entity to be verified."
+  ],
+  "credentialTeacher": [
+    "日语教员 · 待核",
+    "日語教員 · 待核",
+    "日本語教員 · 確認中",
+    "Japanese teaching · To verify"
+  ],
+  "credentialTeacherNote": [
+    "资格名称与持有人待核对。",
+    "資格名稱與持有人待核對。",
+    "資格の名称と保有者を確認中。",
+    "Qualification name and holder to be verified."
+  ],
+  "credentialsPending": [
+    "此栏为待核资料，不作为已取得许可或资格的声明。",
+    "此欄為待核資料，不作為已取得許可或資格的聲明。",
+    "確認中の情報です。許可・資格の取得を表明するものではありません。",
+    "These details are under review and do not claim verified permits or qualifications."
   ]
 }
