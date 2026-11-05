@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 from html import escape
+from main_news import render_news
 
 ROOT = Path(__file__).resolve().parents[1]
 copy = json.loads((ROOT / 'content/home/copy.json').read_text())
@@ -65,6 +66,7 @@ for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing',
     if group == 'travel': html += a('kerama','/zh-hans/kerama-snorkeling/','sub-link','data-route="kerama"')
     html += '</div>'
 html += '</section><section class="block news-section" id="news"><div class="wrap">'+head('newsTitle','newsDesc')+'<div class="tips-grid cards">'
+html += render_news(ROOT, copy, news)
 html += '<!-- TRAVEL-TRANSPORT-20261104-01 START -->'+news('transportTitle','transportDesc','2026.11.04','/zh-hans/news/okinawa-licensed-transport-guide-20261104/','readTransport','transport')+'<!-- TRAVEL-TRANSPORT-20261104-01 END -->'
 html += news('grantTitle','grantDesc','2026.11.03','https://training.nice.okinawa/news/naha-foreign-talent-training-grant-2026/','readJa')
 html += news('tourismTitle','tourismDesc','2026.11.03','/zh-hant/news/okinawa-tourism-h1-2026/','readTourism','tourism')
