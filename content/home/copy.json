@@ -461,12 +461,6 @@
     "ご質問・お見積もりは、中国語・日本語・英語でお問い合わせいただけます。",
     "Questions or a quote? Contact us in Chinese, Japanese or English."
   ],
-  "wechat": [
-    "复制微信号",
-    "複製微信號",
-    "WeChat IDをコピー",
-    "Copy WeChat ID"
-  ],
   "name": [
     "姓名",
     "姓名",
@@ -532,18 +526,6 @@
     "已請求開啟應用程式；請確認並傳送。",
     "アプリを開きます。内容を確認して送信してください。",
     "Opening the app. Please check and send your message there."
-  ],
-  "copied": [
-    "微信号已复制：OkinawaOnline",
-    "微信號已複製：OkinawaOnline",
-    "WeChat IDをコピーしました：OkinawaOnline",
-    "WeChat ID copied: OkinawaOnline"
-  ],
-  "copyFallback": [
-    "请复制微信号：OkinawaOnline",
-    "請複製微信號：OkinawaOnline",
-    "WeChat ID：OkinawaOnline をコピーしてください",
-    "Please copy this WeChat ID: OkinawaOnline"
   ],
   "footer": [
     "© 2026 CatalinaJapan 株式会社 · 冲绳，日本",
