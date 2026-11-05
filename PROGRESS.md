@@ -13,3 +13,15 @@ T0707-14 WAN 宪法 v1.6 已同步到 CLAUDE.md，FREEZE.md 冻结区同步到�
 SEO-0821-01 Kerama 浮潜四语页 Product JSON-LD 从 AggregateOffer 改为单个 Offer `19830 JPY InStock`；删除页面与 llms 中不存在的 fun dive 旧价引用，并同步 CLAUDE.md 到 WAN Constitution v1.14。
 TRAVEL-0824-01 added English Okinawa typhoon travel safety guide under `/en/travel-tips/`, linked it from the root homepage Travel Tips section, and added both new URLs to sitemap.
 M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新闻稿与首页News入口；简中母版入仓，待Wan review后发布；对支付、付费学习、预授权三项零影响。
+
+- M1104-02: 首页四语与三业务入口视觉探索候选，Mini 浏览器回归通过；等待任务4视觉方向与 Review 首页发布契约，未合并、未发布。
+
+- M1104-02 reference alignment: 已读取 Library 十页视觉方案 v2，补齐32色、Main学习绿/海天蓝、无衬线与手机单栏；更新现有Review样张，未入主队列，未推送或发布。
+
+- M1104-02 screenshot feedback: 移除首屏大图并压紧布局，11个入口改为业务根主页；Mini实际逐个点击均200，四语/手机/200%文字回归通过，仅更新Review样张。
+
+- M1104-02 history credentials: 入口旁新增四语紧凑栏；2015与官网2009冲突、三项资质主体未证，均显式待核；未填许可号或宣称国家资格，生产未改。
+
+- M1104-02 dates confirmed: 根据Wan本人澄清，2009为个人来到冲绳、2015为公司成立；四语与JSON-LD同步，三项资质继续待核，仅更新Review。
+- M1105 task2: Wan confirmed three credentials; display used-goods dealing / travel arrangements / Japanese teaching side by side, without holder annotations. Dates retained. Review-only, no push or deploy.
+- M1105 task2 revision: invalidate 0daa109 approval; expand business/OEM, correct multilingual Progress and Chinese/English KISO audience, expose history/credentials below header on mobile. New approval required; no production publish.

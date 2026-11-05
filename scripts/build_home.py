@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+"""Homepage: Chinese original + aligned overlays. Run after editing content/home/copy.json."""
+import json
+from pathlib import Path
+from html import escape
+
+ROOT = Path(__file__).resolve().parents[1]
+copy = json.loads((ROOT / 'content/home/copy.json').read_text())
+assert all(len(v) == 4 and all(isinstance(s, str) and s for s in v) for v in copy.values())
+def t(key, tag='span', attrs=''):
+    return f'<{tag} data-i18n="{key}" {attrs}>{escape(copy[key][0])}</{tag}>'
+def a(key, url, cls='', extra=''):
+    return t(key, 'a', f'href="{url}" class="{cls}" {extra}')
+def card(name, domain, icon):
+    palette = {'snorkel':'free','fishing':'sunny','activity':'joy','golf':'fresh','rental':'sunny','bjt':'fresh','kiso':'fresh','progress':'healing','training':'fresh'}.get(name, '')
+    brand = {'bjt':'Shinko Lab / BJT','kiso':'Shinko Lab / KISO','progress':'Shinko Lab / Progress'}.get(name, '')
+    label = f'<span class="product-family">{brand}</span>' if brand else ''
+    return f'<a class="card" data-palette="{palette}" href="https://{domain}.nice.okinawa/">{label}<span class="card-icon" aria-hidden="true">{icon}</span><span class="domain">{domain}.nice.okinawa</span>' + t(name+'Title','h3') + t(name+'Desc','p') + t('visit',attrs='class="text-link"') + '</a>'
+def head(key, desc=None):
+    return f'<div class="section-head">{t(key,"h2")}{t(desc,"p") if desc else ""}</div>'
+def news(title, desc, date, href, link, route=''):
+    return f'<a href="{href}" class="card tips-card" data-route="{route}"><time class="tips-kicker">{date}</time>' + t(title,'h3','class="tips-title"') + t(desc,'p','class="tips-desc"') + t(link,attrs='class="text-link"') + '</a>'
+html = '''<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>冲绳旅游・语言学习・做生意｜Nice Okinawa</title>
+<meta name="description" content="以冲绳那霸为据点，开展旅游、语言学习、中古车、翻译同行协调与 OEM 产品业务。CatalinaJapan 株式会社。">
+<meta name="theme-color" content="#EFF6FA"><meta name="author" content="CatalinaJapan株式会社">
+<link rel="canonical" href="https://nice.okinawa/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Nice Okinawa">
+<meta property="og:title" content="冲绳旅游・语言学习・做生意｜Nice Okinawa">
+<meta property="og:description" content="旅行、学习与跨境合作，从冲绳开始。">
+<meta property="og:url" content="https://nice.okinawa/"><meta property="og:image" content="https://nice.okinawa/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/home.css">
+<link rel="stylesheet" href="assets/home-palettes.css">
+<script src="assets/js/ui-language-resolver.js"></script>
+<script src="assets/js/home-copy.js"></script>
+</head><body>'''
+html += a('skip','#main','skip')
+html += '<header class="masthead"><div class="wrap header-inner"><a class="logo" href="#main">Nice <em>Okinawa</em><small>CATALINA JAPAN · OKINAWA</small></a><nav class="nav">'
+html += ''.join(a(k,v) for k,v in [('navSites','#sites'),('navNews','#news'),('navCredentials','#history-credentials'),('navContact','#contact')])
+html += '</nav><select id="language" class="language" aria-label="选择语言"><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="ja">日本語</option><option value="en">English</option></select></div></header><main id="main">'
+html += '<div class="wrap header-trust">'+a('navCredentials','#history-credentials','trust-link')+t('headerHistory','p')+'<div class="trust-credentials">'+''.join(t(k) for k in ['credentialDealer','credentialTravel','credentialTeacher'])+'</div></div>'
+html += '<section class="hero wrap"><div class="hero-grid"><div class="hero-copy">'+t('eyebrow','p','class="eyebrow"')+t('heroTitle','h1','style="white-space:pre-line"')+'</div><div class="hero-intro">'+t('heroDesc','p')+'<div class="actions">'+a('navContact','#contact','button secondary')+'</div></div></div><div class="gateway" id="services">'
+entries = [
+    ('travel',[('entryActivity','activity'),('entrySnorkel','snorkel'),('entryFishing','fishing'),('entryGolf','golf'),('entryRental','rental')]),
+    ('learn',[('entryKiso','kiso'),('entryBjt','bjt'),('entryProgress','progress'),('entryTraining','training')]),
+    ('business',[('entryCars','japanusedcars'),('entryTranslation','translation')])
+]
+for i,(key,links) in enumerate(entries):
+    html += f'<article class="gateway-card gateway-{key}"><div class="gateway-heading"><small>0{i+1}</small>{t(key,"h2")}</div><div class="gateway-links">'
+    for label,domain in links:
+        html += a(label,'https://'+domain+'.nice.okinawa/','business-entry',f'data-business="{domain}"')
+    if key == 'business': html += a('entryOem','#contact','business-entry')
+    html += '</div></article>'
+html += '</div></section><aside class="wrap credentials" id="history-credentials" aria-labelledby="credentials-title"><div class="credentials-heading">'+t('credentialsTitle','h2','id="credentials-title"')+t('credentialsIntro','p')+'</div><div class="credentials-history">'+t('historyStart','strong')+t('historyStartNote','p')+'</div><div class="credentials-grid">'
+for title in ['credentialDealer','credentialTravel','credentialTeacher']:
+    html += '<div class="credential-item">'+t(title,'h3')+'</div>'
+html += '</div>'+'</aside><section class="block wrap" id="sites">'+head('servicesTitle','servicesDesc')
+for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing','⌁'),('activity','activity','☀'),('golf','golf','⚑'),('rental','rental','↗')]),('learn',[('bjt','bjt','文'),('kiso','kiso','あ'),('progress','progress','↻'),('training','training','↗')]),('business',[('cars','japanusedcars','↗'),('translation','translation','文')])]:
+    html += f'<div class="site-group" id="{group}">' + t(group,'h3','class="group-title"') + '<div class="cards">'
+    html += ''.join(card(*item) for item in cards)
+    if group == 'business': html += '<a class="card" href="#contact">'+t('oemTitle','h3')+t('oemDesc','p')+t('oemCta',attrs='class="text-link"')+'</a>'
+    html += '</div>'
+    if group == 'travel': html += a('kerama','/zh-hans/kerama-snorkeling/','sub-link','data-route="kerama"')
+    html += '</div>'
+html += '</section><section class="block news-section" id="news"><div class="wrap">'+head('newsTitle','newsDesc')+'<div class="tips-grid cards">'
+html += '<!-- TRAVEL-TRANSPORT-20261104-01 START -->'+news('transportTitle','transportDesc','2026.11.04','/zh-hans/news/okinawa-licensed-transport-guide-20261104/','readTransport','transport')+'<!-- TRAVEL-TRANSPORT-20261104-01 END -->'
+html += news('grantTitle','grantDesc','2026.11.03','https://training.nice.okinawa/news/naha-foreign-talent-training-grant-2026/','readJa')
+html += news('tourismTitle','tourismDesc','2026.11.03','/zh-hant/news/okinawa-tourism-h1-2026/','readTourism','tourism')
+html += '</div></div></section><section class="block wrap" id="travel-tips">'+head('guides')+'<div class="cards">'+news('typhoon','typhoonDesc','','/en/travel-tips/okinawa-typhoon-travel-safety/','readEn')+'</div></section>'
+html += '<section class="block wrap" id="about"><div class="about-grid"><div>'+head('aboutTitle')+t('aboutBody','p')+t('aboutBody2','p')+'<div class="facts"><div>'+t('base','strong')+t('baseLabel')+'</div></div><details id="history">'+t('history','summary')+'<ol class="timeline">'+t('historyArrival','li')+''.join(t('history'+str(i),'li') for i in range(1,6))+'</ol></details></div><div class="partners-panel" id="partners">'+t('partnerTitle','h2')+t('partnerBody','p')+t('partnerDivision','p')+a('partnerCta','/zh/partners/','button','data-route="partners"')+t('partnerNote','p','class="form-note"')+'</div></div></section>'
+html += '<section class="block contact" id="contact"><div class="wrap contact-grid"><div>'+t('contactTitle','h2')+t('contactDesc','p','style="margin-top:22px"')+'<div class="contact-links"><a href="mailto:info@nice.okinawa">info@nice.okinawa</a><a href="https://wa.me/817089523968" target="_blank" rel="noopener">WhatsApp · +81 70-8952-3968</a><button id="copy-wechat" type="button">'+t('wechat')+' · OkinawaOnline</button></div></div><form id="contact-form" novalidate><div class="form-grid">'
+for key,typ in [('name','text'),('email','email')]:
+    html += '<div>'+t(key,'label',f'for="cf-{key}"')+f'<input type="{typ}" id="cf-{key}" name="{key}" autocomplete="{key}" required aria-required="true"></div>'
+html += '<div class="wide">'+t('topic','label','for="cf-type"')+'<select id="cf-type" name="topic">'+''.join(t(k,'option',f'value="{k if k != "choose" else ""}"') for k in ['choose','travel','snorkelTitle','bjtTitle','trainingTitle','business','other'])+'</select></div><div class="wide">'+t('message','label','for="cf-message"')+'<textarea id="cf-message" name="message" required aria-required="true"></textarea></div></div><div class="actions">'+t('sendEmail','button','class="button" id="submitBtn" type="submit"')+t('sendWa','button','class="button secondary" id="waBtn" type="button"')+'</div>'+t('formNote','p','class="form-note"')+'<p id="form-status" class="status" role="status" aria-live="polite"></p></form></div></section></main><footer><div class="wrap footer-inner">'+t('footer')+a('navAbout','#about')+a('navContact','#contact')+'</div></footer>'+a('navContact','#contact','float-contact')+'<script src="assets/js/home.js"></script>'
+html += '<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@type':'Organization','name':'Nice Okinawa','legalName':'CatalinaJapan株式会社','url':'https://nice.okinawa/','email':'info@nice.okinawa','foundingDate':'2015','knowsLanguage':['zh','ja','en'],'address':{'@type':'PostalAddress','addressLocality':'Naha','addressRegion':'Okinawa','addressCountry':'JP'}},ensure_ascii=False)+'</script>'
+html += '<script src="https://analytics.nice.okinawa/beacon.js" data-site="nice-okinawa" defer></script></body></html>\n'
+(ROOT/'index.html').write_text(html)
+(ROOT/'assets/js/home-copy.js').write_text('/* Generated from content/home/copy.json. Order: zh-Hans original, zh-Hant, ja, en. */\nwindow.NiceHomeCopy = '+json.dumps(copy,ensure_ascii=False)+';\n')
+
+# Preserve all eight registered card palettes; only use them for card surfaces/accents.
+palettes = json.loads((ROOT/'content/home/brand-palettes.json').read_text())['palettes']
+css = '/* Generated from the registered eight palettes; dark text on light surfaces. */\n'
+for key, values in palettes.items():
+    css += '[data-palette="'+key+'"]{'+''.join('--palette-'+str(i+1)+':'+value+';' for i,value in enumerate(values))+'}\n'
+css += '#travel .card[data-palette]:not([data-palette=""]),#learn .card[data-palette]:not([data-palette=""]){background:var(--palette-4);border-top:4px solid var(--palette-1)}\n.card[data-palette] .card-icon{background:var(--palette-2);color:#183E39;border-radius:10px;padding:2px 9px}\n'
+(ROOT/'assets/home-palettes.css').write_text(css)

@@ -1,0 +1,11 @@
+/* Generated from the registered eight palettes; dark text on light surfaces. */
+[data-palette="sunny"]{--palette-1:#92D1F5;--palette-2:#F8EA90;--palette-3:#F7EDD5;--palette-4:#D3E8EA;}
+[data-palette="heart"]{--palette-1:#F1CCCE;--palette-2:#EFB6A2;--palette-3:#F4D59E;--palette-4:#F7EFDC;}
+[data-palette="energy"]{--palette-1:#EC9893;--palette-2:#F4D169;--palette-3:#FAF1A5;--palette-4:#F7F0E3;}
+[data-palette="fresh"]{--palette-1:#ACDBB1;--palette-2:#C4E16D;--palette-3:#C5DEB6;--palette-4:#F9F8EE;}
+[data-palette="romantic"]{--palette-1:#CEB9E7;--palette-2:#F3D2D3;--palette-3:#DAD4F7;--palette-4:#F7F5F1;}
+[data-palette="free"]{--palette-1:#6BCAF5;--palette-2:#A0E5EA;--palette-3:#EFBD7D;--palette-4:#F8EFD6;}
+[data-palette="healing"]{--palette-1:#F6E899;--palette-2:#C0C6A0;--palette-3:#F8F2E2;--palette-4:#F7F5EB;}
+[data-palette="joy"]{--palette-1:#56A0F4;--palette-2:#EB9ABB;--palette-3:#EDBD7B;--palette-4:#F9F7F3;}
+#travel .card[data-palette]:not([data-palette=""]),#learn .card[data-palette]:not([data-palette=""]){background:var(--palette-4);border-top:4px solid var(--palette-1)}
+.card[data-palette] .card-icon{background:var(--palette-2);color:#183E39;border-radius:10px;padding:2px 9px}

@@ -1,0 +1,14 @@
+name: Homepage checks
+on:
+  pull_request:
+    paths: ['index.html', 'assets/home*.css', 'assets/js/**', 'content/home/**', 'scripts/build_home.py', 'tests/home*', '.github/workflows/home-checks.yml']
+jobs:
+  home:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: python3 scripts/build_home.py && git diff --exit-code -- index.html assets/js/home-copy.js assets/home-palettes.css
+      - run: node tests/home.test.cjs

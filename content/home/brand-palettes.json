@@ -1,0 +1,14 @@
+{
+  "source": "wan-brand-family-review.pdf, Library libfile_ab937d19891c81919fc665a61e705ad6, version 2, page 3",
+  "note": "Registered HEX values retained. Palette assignment to homepage cards is a candidate design choice, not a historically confirmed product mapping.",
+  "palettes": {
+    "sunny": ["#92D1F5", "#F8EA90", "#F7EDD5", "#D3E8EA"],
+    "heart": ["#F1CCCE", "#EFB6A2", "#F4D59E", "#F7EFDC"],
+    "energy": ["#EC9893", "#F4D169", "#FAF1A5", "#F7F0E3"],
+    "fresh": ["#ACDBB1", "#C4E16D", "#C5DEB6", "#F9F8EE"],
+    "romantic": ["#CEB9E7", "#F3D2D3", "#DAD4F7", "#F7F5F1"],
+    "free": ["#6BCAF5", "#A0E5EA", "#EFBD7D", "#F8EFD6"],
+    "healing": ["#F6E899", "#C0C6A0", "#F8F2E2", "#F7F5EB"],
+    "joy": ["#56A0F4", "#EB9ABB", "#EDBD7B", "#F9F7F3"]
+  }
+}
