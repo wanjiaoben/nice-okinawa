@@ -22,12 +22,12 @@ def news(title, desc, date, href, link, route=''):
     return f'<a href="{href}" class="card tips-card" data-route="{route}"><time class="tips-kicker">{date}</time>' + t(title,'h3','class="tips-title"') + t(desc,'p','class="tips-desc"') + t(link,attrs='class="text-link"') + '</a>'
 html = '''<!doctype html>
 <html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>冲绳旅游・语言教室・出口贸易｜Nice Okinawa</title>
-<meta name="description" content="以冲绳那霸为据点，提供旅游、日语学习、翻译口译与日本中古车出口服务。CatalinaJapan 株式会社。">
+<title>冲绳旅游・语言学习・做生意｜Nice Okinawa</title>
+<meta name="description" content="以冲绳那霸为据点，开展旅游、语言学习、中古车、翻译同行协调与 OEM 产品业务。CatalinaJapan 株式会社。">
 <meta name="theme-color" content="#EFF6FA"><meta name="author" content="CatalinaJapan株式会社">
 <link rel="canonical" href="https://nice.okinawa/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Nice Okinawa">
-<meta property="og:title" content="冲绳旅游・语言教室・出口贸易｜Nice Okinawa">
+<meta property="og:title" content="冲绳旅游・语言学习・做生意｜Nice Okinawa">
 <meta property="og:description" content="旅行、学习与跨境合作，从冲绳开始。">
 <meta property="og:url" content="https://nice.okinawa/"><meta property="og:image" content="https://nice.okinawa/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,8 +38,9 @@ html = '''<!doctype html>
 </head><body>'''
 html += a('skip','#main','skip')
 html += '<header class="masthead"><div class="wrap header-inner"><a class="logo" href="#main">Nice <em>Okinawa</em><small>CATALINA JAPAN · OKINAWA</small></a><nav class="nav">'
-html += ''.join(a(k,v) for k,v in [('navSites','#sites'),('navNews','#news'),('navAbout','#about'),('navContact','#contact')])
+html += ''.join(a(k,v) for k,v in [('navSites','#sites'),('navNews','#news'),('navCredentials','#history-credentials'),('navContact','#contact')])
 html += '</nav><select id="language" class="language" aria-label="选择语言"><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="ja">日本語</option><option value="en">English</option></select></div></header><main id="main">'
+html += '<div class="wrap header-trust">'+a('navCredentials','#history-credentials','trust-link')+t('headerHistory','p')+'<div class="trust-credentials">'+''.join(t(k) for k in ['credentialDealer','credentialTravel','credentialTeacher'])+'</div></div>'
 html += '<section class="hero wrap"><div class="hero-grid"><div class="hero-copy">'+t('eyebrow','p','class="eyebrow"')+t('heroTitle','h1','style="white-space:pre-line"')+'</div><div class="hero-intro">'+t('heroDesc','p')+'<div class="actions">'+a('navContact','#contact','button secondary')+'</div></div></div><div class="gateway" id="services">'
 entries = [
     ('travel',[('entryActivity','activity'),('entrySnorkel','snorkel'),('entryFishing','fishing'),('entryGolf','golf'),('entryRental','rental')]),
@@ -50,6 +51,7 @@ for i,(key,links) in enumerate(entries):
     html += f'<article class="gateway-card gateway-{key}"><div class="gateway-heading"><small>0{i+1}</small>{t(key,"h2")}</div><div class="gateway-links">'
     for label,domain in links:
         html += a(label,'https://'+domain+'.nice.okinawa/','business-entry',f'data-business="{domain}"')
+    if key == 'business': html += a('entryOem','#contact','business-entry')
     html += '</div></article>'
 html += '</div></section><aside class="wrap credentials" id="history-credentials" aria-labelledby="credentials-title"><div class="credentials-heading">'+t('credentialsTitle','h2','id="credentials-title"')+t('credentialsIntro','p')+'</div><div class="credentials-history">'+t('historyStart','strong')+t('historyStartNote','p')+'</div><div class="credentials-grid">'
 for title in ['credentialDealer','credentialTravel','credentialTeacher']:
@@ -57,7 +59,9 @@ for title in ['credentialDealer','credentialTravel','credentialTeacher']:
 html += '</div>'+'</aside><section class="block wrap" id="sites">'+head('servicesTitle','servicesDesc')
 for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing','⌁'),('activity','activity','☀'),('golf','golf','⚑'),('rental','rental','↗')]),('learn',[('bjt','bjt','文'),('kiso','kiso','あ'),('progress','progress','↻'),('training','training','↗')]),('business',[('cars','japanusedcars','↗'),('translation','translation','文')])]:
     html += f'<div class="site-group" id="{group}">' + t(group,'h3','class="group-title"') + '<div class="cards">'
-    html += ''.join(card(*item) for item in cards)+'</div>'
+    html += ''.join(card(*item) for item in cards)
+    if group == 'business': html += '<a class="card" href="#contact">'+t('oemTitle','h3')+t('oemDesc','p')+t('oemCta',attrs='class="text-link"')+'</a>'
+    html += '</div>'
     if group == 'travel': html += a('kerama','/zh-hans/kerama-snorkeling/','sub-link','data-route="kerama"')
     html += '</div>'
 html += '</section><section class="block news-section" id="news"><div class="wrap">'+head('newsTitle','newsDesc')+'<div class="tips-grid cards">'

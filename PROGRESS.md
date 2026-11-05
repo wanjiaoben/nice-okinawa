@@ -24,3 +24,4 @@ M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新�
 
 - M1104-02 dates confirmed: 根据Wan本人澄清，2009为个人来到冲绳、2015为公司成立；四语与JSON-LD同步，三项资质继续待核，仅更新Review。
 - M1105 task2: Wan confirmed three credentials; display used-goods dealing / travel arrangements / Japanese teaching side by side, without holder annotations. Dates retained. Review-only, no push or deploy.
+- M1105 task2 revision: invalidate 0daa109 approval; expand business/OEM, correct multilingual Progress and Chinese/English KISO audience, expose history/credentials below header on mobile. New approval required; no production publish.

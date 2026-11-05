@@ -42,8 +42,8 @@
     "NAHA · OKINAWA · JAPAN"
   ],
   "heroTitle": [
-    "旅行、学习、跨境合作。\n从冲绳开始。",
-    "旅行、學習、跨境合作。\n從沖繩開始。",
+    "旅行、学习、做生意。\n从冲绳开始。",
+    "旅行、學習、做生意。\n從沖繩開始。",
     "旅も、学びも、ビジネスも。\n沖縄から。",
     "Travel, learning & business.\nStart in Okinawa."
   ],
@@ -78,28 +78,28 @@
     "Sea adventures, car rental & golf"
   ],
   "learn": [
-    "语言教室",
-    "語言教室",
-    "日本語教室",
-    "Japanese learning"
+    "语言学习",
+    "語言學習",
+    "語学学習",
+    "Language learning"
   ],
   "learnShort": [
-    "日语基础、商务日语与职场培训",
-    "日語基礎、商務日語與職場培訓",
-    "基礎・ビジネス日本語・企業研修",
-    "Foundations, business & workplace Japanese"
+    "日语学习、商务日语与多语言每日修行",
+    "日語學習、商務日語與多語言每日修行",
+    "日本語学習・ビジネス日本語・多言語の日々の練習",
+    "Japanese, business Japanese and daily multilingual practice"
   ],
   "business": [
-    "出口贸易",
-    "出口貿易",
-    "輸出・ビジネス",
-    "Export & business"
+    "做生意",
+    "做生意",
+    "沖縄でビジネス",
+    "Do business"
   ],
   "businessShort": [
-    "日本中古车出口与翻译支持",
-    "日本中古車出口與翻譯支援",
-    "中古車輸出・翻訳・通訳",
-    "Japanese used cars & translation"
+    "中古车、在冲绳创业的翻译同行协调与 OEM 产品。",
+    "中古車、在沖繩創業的翻譯同行協調與 OEM 產品。",
+    "中古車、沖縄での事業に伴う翻訳・通訳同行・調整、OEM製品。",
+    "Used cars, translation and on-site coordination for business in Okinawa, and OEM products."
   ],
   "servicesTitle": [
     "你想从哪里开始？",
@@ -204,22 +204,22 @@
     "Japanese foundations"
   ],
   "kisoDesc": [
-    "面向中文学习者，练习助词、自他动词、授受表达与句子连接。",
-    "面向中文學習者，練習助詞、自他動詞、授受表達與句子連接。",
-    "中国語話者向けに、助詞・自他動詞・授受表現・接続を練習します。",
-    "Practice particles, transitive and intransitive verbs, giving and receiving, and sentence connections. Designed for Chinese-speaking learners."
+    "面向中文和英文使用者的日语学习，练习助词、自他动词、授受表达与句子连接。",
+    "面向中文和英文使用者的日語學習，練習助詞、自他動詞、授受表達與句子連接。",
+    "中国語・英語話者向けの日本語学習。助詞・自他動詞・授受表現・接続を練習します。",
+    "Japanese learning for Chinese and English speakers, with practice in particles, transitive and intransitive verbs, giving and receiving, and sentence connections."
   ],
   "progressTitle": [
-    "Progress 日语复习",
-    "Progress 日語複習",
-    "Progress 日本語復習",
-    "Progress Japanese review"
+    "Progress 每日修行",
+    "Progress 每日修行",
+    "Progress 毎日の練習",
+    "Progress daily practice"
   ],
   "progressDesc": [
-    "通过间隔重复，复习日语词汇、单词卡、听写与音频。",
-    "透過間隔重複，複習日語詞彙、單字卡、聽寫與音訊。",
-    "間隔反復で語彙・単語カード・書き取り・音声を復習できます。",
-    "Review vocabulary, flashcards, dictation and audio with spaced repetition."
+    "以单词和固定搭配为主，面向多种语言、不同学习目的的每日修行。",
+    "以單詞和固定搭配為主，面向多種語言、不同學習目的的每日修行。",
+    "単語と定型表現を中心に、さまざまな言語・学習目的に合わせて続ける日々の練習。",
+    "Daily practice focused on words and fixed expressions, across languages and learning goals."
   ],
   "trainingTitle": [
     "职场日语培训",
@@ -246,16 +246,16 @@
     "Used-car purchase advice, export documents and shipping coordination, plus local sales in Okinawa."
   ],
   "translationTitle": [
-    "商务翻译与口译",
-    "商務翻譯與口譯",
-    "ビジネス翻訳・通訳",
-    "Business translation & interpreting"
+    "在冲绳做生意 · 翻译同行协调",
+    "在沖繩做生意 · 翻譯同行協調",
+    "沖縄での事業 · 翻訳・同行・調整",
+    "Business in Okinawa · translation & coordination"
   ],
   "translationDesc": [
-    "中、日、英语言支持，涵盖文件翻译、商务洽谈及手续办理陪同口译。",
-    "中、日、英語言支援，涵蓋文件翻譯、商務洽談及手續辦理陪同口譯。",
-    "中国語・日本語・英語の文書翻訳、商談や各種手続きの通訳同行に対応。",
-    "Chinese, Japanese and English support for document translation, business meetings and administrative appointments."
+    "在冲绳开公司、雇员工、开民宿或餐厅、申请在留资格等场景中的文件翻译、同行口译与沟通协调。",
+    "在沖繩開公司、僱員工、開民宿或餐廳、申請在留資格等情境中的文件翻譯、同行口譯與溝通協調。",
+    "沖縄での会社設立、雇用、民泊・飲食店の開業、在留資格申請などに伴う文書翻訳、通訳同行、関係者との連絡調整。",
+    "Document translation, on-site interpreting and coordination for setting up a company, hiring staff, opening a guesthouse or restaurant, and residence-status applications in Okinawa."
   ],
   "newsTitle": [
     "来自冲绳的最新消息",
@@ -354,10 +354,10 @@
     "Rooted in Okinawa. Connected to the world."
   ],
   "aboutBody": [
-    "CatalinaJapan 株式会社成立于 2015 年，以冲绳那霸为据点，开展旅游、日语教育、翻译口译与中古车出口业务。",
-    "CatalinaJapan 株式會社成立於 2015 年，以沖繩那霸為據點，開展旅遊、日語教育、翻譯口譯與中古車出口業務。",
-    "CatalinaJapan株式会社は2015年設立。沖縄・那覇を拠点に、観光・日本語教育・翻訳通訳・中古車輸出に取り組んでいます。",
-    "Established in 2015, CatalinaJapan is based in Naha, Okinawa, working across travel, Japanese education, translation, interpreting and used-car exports."
+    "CatalinaJapan 株式会社成立于 2015 年，以冲绳那霸为据点，开展旅游、语言学习、中古车、翻译同行协调与 OEM 产品业务。",
+    "CatalinaJapan 株式會社成立於 2015 年，以沖繩那霸為據點，開展旅遊、語言學習、中古車、翻譯同行協調與 OEM 產品業務。",
+    "CatalinaJapan株式会社は2015年設立。沖縄・那覇を拠点に、観光・語学学習・中古車・翻訳や通訳同行と調整・OEM製品に取り組んでいます。",
+    "Established in 2015, CatalinaJapan is based in Naha, Okinawa, working across travel, language learning, used cars, translation and on-site coordination, and OEM products."
   ],
   "aboutBody2": [
     "以中文、日文、英文沟通，让旅行、学习与跨境合作有一个清晰的起点。",
@@ -600,10 +600,10 @@
     "KISO foundations"
   ],
   "entryProgress": [
-    "Progress 复习",
-    "Progress 複習",
-    "Progress 復習",
-    "Progress review"
+    "Progress 每日修行",
+    "Progress 每日修行",
+    "Progress 毎日の練習",
+    "Progress daily practice"
   ],
   "entryTraining": [
     "职场培训",
@@ -618,10 +618,10 @@
     "Used-car homepage"
   ],
   "entryTranslation": [
-    "翻译与口译",
-    "翻譯與口譯",
-    "翻訳・通訳",
-    "Translation"
+    "翻译同行协调",
+    "翻譯同行協調",
+    "翻訳・同行・調整",
+    "Translation & coordination"
   ],
   "credentialsTitle": [
     "我们的历程与资质",
@@ -630,10 +630,10 @@
     "Our story & credentials"
   ],
   "credentialsIntro": [
-    "扎根冲绳，连接旅行、语言学习与跨境业务。",
-    "扎根沖繩，連接旅行、語言學習與跨境業務。",
-    "沖縄を拠点に、旅・日本語学習・海外とのビジネスをつなぎます。",
-    "Based in Okinawa, connecting travel, Japanese learning and cross-border business."
+    "2009 年来到冲绳，2015 年公司成立。",
+    "2009 年來到沖繩，2015 年公司成立。",
+    "2009年に沖縄へ。2015年に会社を設立。",
+    "Arrived in Okinawa in 2009. Established the company in 2015."
   ],
   "historyStart": [
     "2015 · 公司成立",
@@ -670,5 +670,41 @@
     "2009 · 來到沖繩（個人經歷）。",
     "2009 · 沖縄へ（個人の歩み）。",
     "2009 · Arrival in Okinawa (personal history)."
+  ],
+  "entryOem": [
+    "OEM 产品咨询",
+    "OEM 產品諮詢",
+    "OEM製品の相談",
+    "OEM product enquiries"
+  ],
+  "oemTitle": [
+    "OEM 产品",
+    "OEM 產品",
+    "OEM製品",
+    "OEM products"
+  ],
+  "oemDesc": [
+    "有关 OEM 产品的需求与合作，请联系我们沟通。",
+    "有關 OEM 產品的需求與合作，請聯絡我們溝通。",
+    "OEM製品のご要望や協業について、お問い合わせください。",
+    "Contact us to discuss your OEM product needs and cooperation."
+  ],
+  "oemCta": [
+    "联系咨询 →",
+    "聯絡諮詢 →",
+    "お問い合わせ →",
+    "Contact us →"
+  ],
+  "navCredentials": [
+    "历史与资质",
+    "歷史與資質",
+    "歩み・許認可等",
+    "History & credentials"
+  ],
+  "headerHistory": [
+    "2009 来到冲绳 · 2015 公司成立",
+    "2009 來到沖繩 · 2015 公司成立",
+    "2009 沖縄へ · 2015 会社設立",
+    "2009 Arrived in Okinawa · 2015 Company established"
   ]
 }
