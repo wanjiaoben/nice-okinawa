@@ -33,6 +33,6 @@ const org = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/
 assert.equal(org.foundingDate, '2015');
 assert(copy.historyStart.every(s=>s.includes('2015')));
 assert(copy.historyArrival.every(s=>s.includes('2009')));
-for(const key of ['credentialDealer','credentialTravel','credentialTeacher']) assert(copy[key].every(s=>/待核|確認中|verify/.test(s)));
+for(const key of ['credentialDealer','credentialTravel','credentialTeacher']) assert(copy[key].every(s=>!/待核|確認中|verify|公司|個人/.test(s)));
 assert(!html.includes("SINCE 2009"));
-console.log("PASS 2015 company founding and 2009 personal arrival remain distinct; three credentials remain unverified.");
+console.log("PASS 2015 company founding and 2009 personal arrival remain distinct; three credentials use owner-confirmed labels without holder annotations.");

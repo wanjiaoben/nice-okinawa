@@ -51,10 +51,10 @@ for i,(key,links) in enumerate(entries):
     for label,domain in links:
         html += a(label,'https://'+domain+'.nice.okinawa/','business-entry',f'data-business="{domain}"')
     html += '</div></article>'
-html += '</div></section><aside class="wrap credentials" id="history-credentials" aria-labelledby="credentials-title"><div class="credentials-heading">'+t('credentialsTitle','h2','id="credentials-title"')+t('credentialsIntro','p')+'</div><div class="credentials-grid">'
-for title,desc in [('historyStart','historyStartNote'),('credentialDealer','credentialDealerNote'),('credentialTravel','credentialTravelNote'),('credentialTeacher','credentialTeacherNote')]:
-    html += '<div class="credential-item">'+t(title,'h3')+t(desc,'p')+'</div>'
-html += '</div>'+t('credentialsPending','p','class="credentials-note"')+'</aside><section class="block wrap" id="sites">'+head('servicesTitle','servicesDesc')
+html += '</div></section><aside class="wrap credentials" id="history-credentials" aria-labelledby="credentials-title"><div class="credentials-heading">'+t('credentialsTitle','h2','id="credentials-title"')+t('credentialsIntro','p')+'</div><div class="credentials-history">'+t('historyStart','strong')+t('historyStartNote','p')+'</div><div class="credentials-grid">'
+for title in ['credentialDealer','credentialTravel','credentialTeacher']:
+    html += '<div class="credential-item">'+t(title,'h3')+'</div>'
+html += '</div>'+'</aside><section class="block wrap" id="sites">'+head('servicesTitle','servicesDesc')
 for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing','⌁'),('activity','activity','☀'),('golf','golf','⚑'),('rental','rental','↗')]),('learn',[('bjt','bjt','文'),('kiso','kiso','あ'),('progress','progress','↻'),('training','training','↗')]),('business',[('cars','japanusedcars','↗'),('translation','translation','文')])]:
     html += f'<div class="site-group" id="{group}">' + t(group,'h3','class="group-title"') + '<div class="cards">'
     html += ''.join(card(*item) for item in cards)+'</div>'

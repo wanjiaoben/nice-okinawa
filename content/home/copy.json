@@ -648,46 +648,22 @@
     "Arrival in Okinawa in 2009 (personal history)."
   ],
   "credentialDealer": [
-    "古物商 · 待核",
-    "古物商 · 待核",
-    "古物商 · 確認中",
-    "Used-goods dealing · To verify"
-  ],
-  "credentialDealerNote": [
-    "许可名称、持证主体待核对。",
-    "許可名稱、持證主體待核對。",
-    "許可の名称と名義人を確認中。",
-    "Permit name and holder to be verified."
+    "古物商",
+    "古物商",
+    "古物商",
+    "Used-goods dealing"
   ],
   "credentialTravel": [
-    "旅游手配 · 待核",
-    "旅遊手配 · 待核",
-    "旅行手配 · 確認中",
-    "Travel arrangements · To verify"
-  ],
-  "credentialTravelNote": [
-    "正式登记类别与主体待核对。",
-    "正式登記類別與主體待核對。",
-    "正式な登録区分と名義人を確認中。",
-    "Registration category and entity to be verified."
+    "旅游手配",
+    "旅遊手配",
+    "旅行手配",
+    "Travel arrangements"
   ],
   "credentialTeacher": [
-    "日语教员 · 待核",
-    "日語教員 · 待核",
-    "日本語教員 · 確認中",
-    "Japanese teaching · To verify"
-  ],
-  "credentialTeacherNote": [
-    "资格名称与持有人待核对。",
-    "資格名稱與持有人待核對。",
-    "資格の名称と保有者を確認中。",
-    "Qualification name and holder to be verified."
-  ],
-  "credentialsPending": [
-    "历史年份已确认；三项许可与资格的正式名称、名义人仍待核对。",
-    "歷史年份已確認；三項許可與資格的正式名稱、名義人仍待核對。",
-    "沿革の年は確認済みです。3項目の許可・資格の正式名称と名義人は引き続き確認中です。",
-    "The historical dates are confirmed; formal names and holders of the three permits or qualifications remain under review."
+    "日语教学",
+    "日語教學",
+    "日本語教育",
+    "Japanese teaching"
   ],
   "historyArrival": [
     "2009 · 来到冲绳（个人经历）。",
