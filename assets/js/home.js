@@ -57,9 +57,5 @@
   }
   form.addEventListener('submit', e => { e.preventDefault(); send('email'); });
   document.getElementById('waBtn').addEventListener('click', () => send('whatsapp'));
-  document.getElementById('copy-wechat').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText('OkinawaOnline'); status.textContent = text('copied'); }
-    catch (_) { status.textContent = text('copyFallback'); }
-  });
   applyLanguage();
 })();
