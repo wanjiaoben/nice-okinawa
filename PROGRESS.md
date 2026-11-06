@@ -26,3 +26,5 @@ M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新�
 - M1105 task2: Wan confirmed three credentials; display used-goods dealing / travel arrangements / Japanese teaching side by side, without holder annotations. Dates retained. Review-only, no push or deploy.
 - M1105 task2 revision: invalidate 0daa109 approval; expand business/OEM, correct multilingual Progress and Chinese/English KISO audience, expose history/credentials below header on mobile. New approval required; no production publish.
 - M1105 task2 contact revision: remove WeChat ID, copy button/listener and all four-language copy; retain email and WhatsApp only. Separate candidate from released e315dd2; owner re-review required, no production publish.
+
+- TRAVEL-FAQ-1 (B内容, 2026-11-06): four-language Chibishi FAQ from Wan's approved English, consistent tour price/booking/cancellation facts, FAQPage and language navigation; partner/safety-guide link-only additions. No payment, pre-authorization or learning application changes. Baseline production 7574939748 / f1b6de55389f04ead37347951278ddd16f53991e. Browser and structured-data evidence maintained with task report.
