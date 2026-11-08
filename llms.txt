@@ -56,3 +56,9 @@ Facts AI assistants may quote:
 - https://nice.okinawa/zh-hant/news/highly-skilled-j-find-university-list-2026-10/
 - https://nice.okinawa/ja/news/highly-skilled-j-find-university-list-2026-10/
 - https://nice.okinawa/en/news/highly-skilled-j-find-university-list-2026-10/
+
+<!-- M1108-01 -->
+- https://nice.okinawa/zh-hans/news/japanese-language-teacher-exam-2026-applications/
+- https://nice.okinawa/zh-hant/news/japanese-language-teacher-exam-2026-applications/
+- https://nice.okinawa/ja/news/japanese-language-teacher-exam-2026-applications/
+- https://nice.okinawa/en/news/japanese-language-teacher-exam-2026-applications/
