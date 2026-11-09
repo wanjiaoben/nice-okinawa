@@ -707,6 +707,24 @@
     "主サイトで全文を読む",
     "Read the full article on our main site"
   ],
+  "BR2026015Title": [
+    "那霸机场周边租车安全措施启动：出发先确认左侧通行",
+    "那霸機場周邊租車安全措施啟動：出發先確認左側通行",
+    "那覇空港周辺でレンタカー安全対策：出発時に左側通行を確認",
+    "Rental-car safety measures near Naha Airport: check that you keep left"
+  ],
+  "BR2026015Desc": [
+    "冲绳综合事务局11月6日公布，将从2026年11月起逐步加强那霸机场周边外国旅客租车安全引导。这是道路设施与提醒措施的部署，不是新交通法规。",
+    "沖繩綜合事務局11月6日公布，將從2026年11月起逐步加強那霸機場周邊外國旅客租車安全引導。這是道路設施與提醒措施的部署，並非新交通法規。",
+    "沖縄総合事務局は11月6日、2026年11月から那覇空港周辺の訪日外国人レンタカー向け安全対策を順次進めると発表しました。道路設備や注意喚起の取組であり、新しい交通法規の導入ではありません。",
+    "On November 6, the Okinawa General Bureau announced a phased rollout of safety guidance for overseas rental-car drivers near Naha Airport, starting in November 2026. These are road improvements and reminders, not new traffic laws."
+  ],
+  "BR2026015Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
+  ],
   "M110801Title": [
     "2026年度日本语教员试验报名人数达20,918人，冲绳同比增长21.1%",
     "2026年度日本語教員試驗報名人數達20,918人，沖繩同比增長21.1%",
