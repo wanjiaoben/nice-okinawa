@@ -742,5 +742,23 @@
     "閱讀全文",
     "全文を読む",
     "Read the full article"
+  ],
+  "BR2026019Title": [
+    "日本语教员试验计划于2027年2月进行CBT试行，正式全面改制尚未确定",
+    "日本語教員試驗計畫於2027年2月進行CBT試行，正式全面改制尚未確定",
+    "日本語教員試験、2027年2月にCBT試行調査を予定―本試験の全面移行は未確定",
+    "Japan plans a February 2027 CBT trial for the Japanese Language Teacher Examination; full transition remains undecided"
+  ],
+  "BR2026019Desc": [
+    "文科省计划在47都道府县开展免费试行调查，不作合格判定；报名预计12月18日以后开始。",
+    "文科省計畫在47都道府縣開展免費試行調查，不作合格判定；報名預計12月18日以後開始。",
+    "文科省が47都道府県で無料の試行調査を予定。合否判定は行わず、申込みは12月18日以降に開始予定です。",
+    "MEXT plans a free trial in all 47 prefectures, with no pass/fail decision and applications expected after December 18."
+  ],
+  "BR2026019Read": [
+    "阅读报道",
+    "閱讀報導",
+    "記事を読む",
+    "Read the report"
   ]
 }
