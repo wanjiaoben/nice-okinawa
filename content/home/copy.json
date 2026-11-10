@@ -742,5 +742,23 @@
     "閱讀全文",
     "全文を読む",
     "Read the full article"
+  ],
+  "BR2026018Title": [
+    "民间SNS自愿调查：2026日本语教员试验难度体感，X受访者80.8%选择“难”",
+    "民間SNS自願調查：2026日本語教員試驗難度體感，X受訪者80.8%選擇「難」",
+    "民間SNSの任意調査：2026年度日本語教員試験、X回答者の80.8％が「難しい」と回答",
+    "Voluntary private SNS poll: 80.8% of X respondents found the 2026 Japanese Language Teacher Examination difficult"
+  ],
+  "BR2026018Desc": [
+    "日本语教师ナビ公布考后自愿调查；两类问卷样本不同，不能代表全部考生或官方难度。",
+    "日本語教師ナビ公布考後自願調查；兩類問卷樣本不同，不能代表全部考生或官方難度。",
+    "日本語教師ナビの試験後アンケート。設問ごとに回答数が異なり、受験者全体や公式の難易度を示すものではありません。",
+    "Nihongo Kyoshi Navi’s voluntary post-exam polls use different samples and do not establish official difficulty or represent all candidates."
+  ],
+  "BR2026018Read": [
+    "阅读报道",
+    "閱讀報導",
+    "記事を読む",
+    "Read the report"
   ]
 }
