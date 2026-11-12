@@ -760,5 +760,23 @@
     "閱讀報導",
     "記事を読む",
     "Read the report"
+  ],
+  "BR2026022Title": [
+    "PHP漏洞应对引发培训系统停机：补贴培训企业如何留证",
+    "PHP漏洞應對引發培訓系統停機：補助訓練企業如何留證",
+    "PHP脆弱性対応で研修システムが停止したら：助成金対象訓練の記録と変更届",
+    "When PHP Vulnerability Remediation Disrupts Subsidized Training: What Employers Should Record"
+  ],
+  "BR2026022Desc": [
+    "厚劳省提示，非企业或学员责任导致计划培训无法进行时，应咨询劳动局或Hello Work。整理停机、学习记录与补课证据，不能把提示理解为自动获补助。",
+    "厚勞省提示，非企業或學員責任導致計畫訓練無法進行時，應洽詢勞動局或Hello Work。整理停機、學習紀錄與補課證據，不代表自動取得補助。",
+    "厚労省は、事業主・労働者に帰責できない訓練中断について労働局やハローワークへの相談を案内しています。停止記録と補講計画を整理しましょう。",
+    "Japan's MHLW advises employers to consult the local Labour Bureau or Hello Work about training changes after unavoidable disruption. Keep evidence; the notice does not guarantee a subsidy."
+  ],
+  "BR2026022Read": [
+    "阅读报道",
+    "閱讀報導",
+    "記事を読む",
+    "Read the report"
   ]
 }
