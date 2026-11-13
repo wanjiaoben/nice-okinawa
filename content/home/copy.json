@@ -778,5 +778,23 @@
     "閱讀報導",
     "記事を読む",
     "Read the report"
+  ],
+  "BR2026025Title": [
+    "日本与越南签署育成就劳合作备忘录：企业可为2027年制度启动提前准备岗位日语培训",
+    "日本與越南簽署育成就勞合作備忘錄：企業可為2027年制度啟動提前準備職務日語培訓",
+    "日本・ベトナム、育成就労制度の協力覚書に署名　2027年開始に向け企業は職種別日本語研修の準備を",
+    "Japan and Vietnam Sign MOC on Employment for Skill Development: Employers Can Prepare Job-Specific Japanese Training for 2027"
+  ],
+  "BR2026025Desc": [
+    "日本与越南于2026年11月9日签署育成就劳制度合作备忘录。日本厚生劳动省、出入国在留管理厅及外国人技能实习机构随后更新相关官方页面。至此，日本已与越南等7个国家建立育成就劳制度合作备忘录框架。",
+    "日本與越南於2026年11月9日簽署育成就勞制度合作備忘錄。日本厚生勞動省、出入國在留管理廳及外國人技能實習機構隨後更新相關官方頁面。至此，日本已與越南等7個國家建立育成就勞制度合作備忘錄框架。",
+    "日本とベトナムは2026年11月9日、育成就労制度に関する協力覚書（MOC）に署名しました。その後、厚生労働省、出入国在留管理庁、外国人技能実習機構が関連する公式情報を更新しました。これにより、育成就労制度の協力覚書を作成した国は、ベトナムを含む7か国となりました。",
+    "Japan and Vietnam signed a Memorandum of Cooperation on the Employment for Skill Development Program on November 9, 2026. Japan’s Ministry of Health, Labour and Welfare, Immigration Services Agency, and Organization for Technical Intern Training subsequently updated their official information. Vietnam is now among seven countries covered by this cooperation framework."
+  ],
+  "BR2026025Read": [
+    "阅读新闻",
+    "閱讀新聞",
+    "ニュースを読む",
+    "Read article"
   ]
 }
