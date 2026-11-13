@@ -28,3 +28,5 @@ M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新�
 - M1105 task2 contact revision: remove WeChat ID, copy button/listener and all four-language copy; retain email and WhatsApp only. Separate candidate from released e315dd2; owner re-review required, no production publish.
 
 - TRAVEL-FAQ-1 (B内容, 2026-11-06): four-language Chibishi FAQ from Wan's approved English, consistent tour price/booking/cancellation facts, FAQPage and language navigation; partner/safety-guide link-only additions. No payment, pre-authorization or learning application changes. Baseline production 7574939748 / f1b6de55389f04ead37347951278ddd16f53991e. Browser and structured-data evidence maintained with task report.
+
+- HB-149 (B内容, 2026-11-13): owner-approved HB104 compact design and exact bilingual v2 copy, 18 B2B pages with FAQ/Service metadata, homepage and travel-guide link-only entries, sitemap and llms. No learning, payment, pre-authorization, credentials or production data changes. Baseline 407c34eb46d733d7cc90e3f6beffb9929e8ce314. Local 36 viewport checks and source-copy comparison passed; publication receipt follows in task report.

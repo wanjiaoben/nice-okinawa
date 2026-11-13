@@ -21,12 +21,14 @@
     document.querySelector('meta[property="og:description"]').content = text('heroDesc');
     const prefix = pathLocales[locale];
     const routes = {
+      b2bDesk:locale === 'zh-Hans' ? '/zh-hans/partners/' : '/en/partners/',
       kerama:`/${prefix}/kerama-snorkeling/`,
       transport:`/${locale === 'zh-Hant' ? 'zh-hans' : prefix}/news/okinawa-licensed-transport-guide-20261104/`,
       tourism:`/${locale === 'zh-Hans' ? 'zh-hant' : prefix}/news/okinawa-tourism-h1-2026/`,
       partners:({'zh-Hans':'/zh/partners/','zh-Hant':'/zh-hant/partners/',ja:'/ja/partners/',en:'/partners/'})[locale]
     };
     document.querySelectorAll('[data-route]').forEach(el => { if (routes[el.dataset.route]) el.href = new URL('.'+routes[el.dataset.route], siteRoot).href; });
+    document.querySelectorAll('[data-b2b-desk]').forEach(el => { el.hidden = !['zh-Hans','en'].includes(locale); });
     document.querySelectorAll('[data-news-slug]').forEach(el => {
       const slug = el.dataset.newsSlug;
       if (/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) el.href = new URL('./'+prefix+'/news/'+slug+'/', siteRoot).href;
