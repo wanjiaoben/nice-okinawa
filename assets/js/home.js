@@ -28,7 +28,7 @@
       partners:({'zh-Hans':'/zh/partners/','zh-Hant':'/zh-hant/partners/',ja:'/ja/partners/',en:'/partners/'})[locale]
     };
     document.querySelectorAll('[data-route]').forEach(el => { if (routes[el.dataset.route]) el.href = new URL('.'+routes[el.dataset.route], siteRoot).href; });
-    document.querySelectorAll('[data-b2b-desk]').forEach(el => { el.hidden = !['zh-Hans','en'].includes(locale); });
+    document.querySelectorAll('[data-b2b-desk]').forEach(el => { el.hidden = !['zh-Hans','en'].includes(locale); el.style.display = el.hidden ? 'none' : ''; });
     document.querySelectorAll('[data-news-slug]').forEach(el => {
       const slug = el.dataset.newsSlug;
       if (/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) el.href = new URL('./'+prefix+'/news/'+slug+'/', siteRoot).href;
