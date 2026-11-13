@@ -64,6 +64,7 @@ for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing',
     if group == 'business': html += '<a class="card" href="#contact">'+t('oemTitle','h3')+t('oemDesc','p')+t('oemCta',attrs='class="text-link"')+'</a>'
     html += '</div>'
     if group == 'travel': html += a('kerama','/zh-hans/kerama-snorkeling/','sub-link','data-route="kerama"')
+    if group == 'business': html += a('b2bDesk','/zh-hans/partners/','sub-link','data-route="b2bDesk" data-b2b-desk')
     html += '</div>'
 html += '</section><section class="block news-section" id="news"><div class="wrap">'+head('newsTitle','newsDesc')+'<div class="tips-grid cards">'
 html += render_news(ROOT, copy, news)
