@@ -1,0 +1,7 @@
+{
+  "before": [],
+  "after": [
+    {"name": "NEWS", "type": "r2_bucket", "state": "bound"},
+    {"name": "NEWS_PUBLISH_TOKEN_SHA256", "type": "plain_text", "state": "nonempty"}
+  ]
+}

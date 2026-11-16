@@ -1,0 +1,39 @@
+{
+  "schema": "news-data-v1",
+  "id": "INTERFACE-DEMO",
+  "category": "learning",
+  "languages": {
+    "zh-Hans": {
+      "title": "四语数据稿件展示",
+      "summary": "这是界面示例，不是新闻稿，不会入队或发布。",
+      "body": "这是界面示例，不是新闻稿，不会入队或发布。",
+      "byline": "深耕自留地研究室"
+    },
+    "zh-Hant": {
+      "title": "四語資料稿件展示",
+      "summary": "這是介面範例，不是新聞稿，不會入列或發布。",
+      "body": "這是介面範例，不是新聞稿，不會入列或發布。",
+      "byline": "深耕自留地研究室"
+    },
+    "en": {
+      "title": "Four-language data preview",
+      "summary": "This is an interface example, not an article. It cannot be queued or published.",
+      "body": "This is an interface example, not an article. It cannot be queued or published.",
+      "byline": "Shinko Lab"
+    },
+    "ja": {
+      "title": "4言語のデータ原稿プレビュー",
+      "summary": "画面の例です。ニュース原稿ではなく、審査待ち登録や公開はできません。",
+      "body": "画面の例です。ニュース原稿ではなく、審査待ち登録や公開はできません。",
+      "byline": "深耕ラボ"
+    }
+  },
+  "sources": [
+    "https://nice.okinawa/"
+  ],
+  "fact_check": {
+    "checked_at": 1794808134,
+    "valid_until": 1794811734,
+    "note": "Interface-only demo, not a factual article; no publication."
+  }
+}
