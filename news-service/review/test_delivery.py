@@ -51,4 +51,28 @@ class DeliveryTest(unittest.TestCase):
   with self.s.connect() as db:db.execute('UPDATE revisions SET body=?',(json.dumps({**self.d,'id':'CHANGED'}),))
   with self.assertRaises(ValueError):Delivery(self.s,self.transport).deliver(self.id)
   self.assertEqual(self.calls,0)
+ def test_historical_receipt_not_current_publication(self):
+  self.approve();d=Delivery(self.s,self.transport)
+  def lost(path,p=None):
+   r=self.transport(path,p)
+   if p:raise TimeoutError('response lost')
+   return r
+  with self.assertRaises(TimeoutError):Delivery(self.s,lost).deliver(self.id)
+  self.current=None
+  with self.assertRaises(ValueError):d.reconcile(self.id)
+  self.assertEqual(self.s.get(self.id)[0]['state'],'approved_pending_publish')
+ def test_late_approve_receipt_preserves_withdrawn(self):
+  self.approve();d=Delivery(self.s,self.transport)
+  with self.s.connect() as db:row=dict(db.execute('SELECT * FROM outbox').fetchone())
+  receipt=d.deliver(self.id)
+  self.s.decide(self.id,self.h,'withdraw','wan@example.test',self.s.token(self.id,'wan@example.test'),True)
+  d.deliver(self.id);d.accept(row,receipt)
+  self.assertEqual(self.s.get(self.id)[0]['state'],'withdrawn')
+ def test_retry_action_keeps_original_outbox(self):
+  self.approve()
+  def down(path,p=None):raise TimeoutError('offline fixture')
+  with self.assertRaises(TimeoutError):Delivery(self.s,down).deliver(self.id)
+  self.s.decide(self.id,self.h,'retry','wan@example.test',self.s.token(self.id,'wan@example.test'),True)
+  with self.s.connect() as db:self.assertEqual(db.execute('SELECT count(*) FROM outbox').fetchone()[0],1)
+  Delivery(self.s,self.transport).deliver(self.id);self.assertEqual(self.calls,1)
 if __name__=='__main__':unittest.main()
