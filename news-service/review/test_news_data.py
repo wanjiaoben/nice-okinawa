@@ -73,7 +73,7 @@ class Tests(unittest.TestCase):
   for lang in LANGS:self.assertIn(html.escape(self.doc['languages'][lang]['body']),text);self.assertIn(BYLINES[lang],text)
  def test_existing_access_and_origin(self):
   s=types.SimpleNamespace(__file__=str(Path(self.tmp.name)/'review_server.py'),validate_origin=lambda h:None,access_identity=lambda h:{'email':self.actor} if h.get('jwt')=='verified' else {})
-  app=App(s)
+  app=App(s);app.delivery.transport=lambda path:{'ready':False}
   with self.assertRaises(ValueError):app.identity({})
   with self.assertRaises(PermissionError):app.identity({'jwt':'verified','Origin':'https://evil.invalid'},True)
   self.assertEqual(app.identity({'jwt':'verified','Origin':'https://review.nice.okinawa'},True),self.actor);self.assertFalse(app.ready())

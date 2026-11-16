@@ -1,6 +1,9 @@
 """Exact-version delivery. Only existing approved outbox rows may be sent."""
-import json,os,time,urllib.request,urllib.error
+import json,os,time,urllib.request,urllib.error,subprocess
+from pathlib import Path
 from news_data import digest,canonical,require
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+ def redirect_request(self,*args,**kwargs):return None
 
 class Delivery:
  def __init__(self,store,transport=None):
@@ -8,10 +11,14 @@ class Delivery:
   with store.connect() as db:db.execute('CREATE TABLE IF NOT EXISTS delivery_receipts(event_key TEXT PRIMARY KEY, body TEXT, received INTEGER)')
  def request(self,path,payload=None):
   token=os.environ.get('NICE_NEWS_PUBLISH_TOKEN','')
-  require(token,'发布凭证未配置')
+  if not token:
+   try:
+    p=subprocess.run(['/usr/bin/python3',str(Path(__file__).with_name('news_keychain_transport.py'))],input=canonical({'path':path,'payload':payload}),text=True,capture_output=True,timeout=20)
+    require(p.returncode==0,'发布连接暂未确认');return json.loads(p.stdout)
+   except Exception:raise RuntimeError('发布回执暂未确认，请稍后刷新核对') from None
   req=urllib.request.Request('https://nice-news-data-v1.gerheidicn.workers.dev'+path,data=canonical(payload).encode() if payload is not None else None,headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'})
   try:
-   with urllib.request.urlopen(req,timeout=15) as r:return json.load(r)
+   with urllib.request.build_opener(NoRedirect).open(req,timeout=15) as r:return json.load(r)
   except Exception:raise RuntimeError('发布回执暂未确认，请稍后刷新核对') from None
  def ready(self):
   try:return self.transport('/__news/status').get('ready') is True
