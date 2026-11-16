@@ -42,7 +42,14 @@ await fs.writeFile('news-service/release-evidence/smoke.json',JSON.stringify({ch
 console.log('News Worker deployment completed; see release-evidence for ID and hashes.');
 }catch(error){
  if(attempted){
-  try{const rollback=await api(root+'/deployments',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({strategy:'percentage',versions:previous.versions,annotations:{'workers/message':'HB-174 initial release verification failed; restore approved Hello World anchor'}})});await fs.writeFile('news-service/release-evidence/rollback-result.json',JSON.stringify({id:rollback.id,versions:rollback.versions},null,2));}
+  try{
+   const rollback=await api(root+'/deployments',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({strategy:'percentage',versions:previous.versions,annotations:{'workers/message':'HB-174 initial release verification failed; restore approved Hello World anchor'}})});
+   const active=(await api(root+'/deployments')).deployments?.[0],restored=snapshot(await api(root+'/settings'));
+   const probe=await fetch('https://nice-news-data-v1.gerheidicn.workers.dev/',{redirect:'error'}),body=await probe.text();
+   const verified=JSON.stringify(active?.versions)===JSON.stringify(previous.versions)&&JSON.stringify(restored)===JSON.stringify(expected.before)&&probe.status===200&&body.trim()==='Hello World!';
+   await fs.writeFile('news-service/release-evidence/rollback-result.json',JSON.stringify({id:rollback.id,versions:rollback.versions,verified,restored_config:restored,probe_status:probe.status},null,2));
+   if(!verified)throw Error('rollback not verified');
+  }
   catch{await fs.writeFile('news-service/release-evidence/rollback-failed.json',JSON.stringify({requires_manual_restore:true,anchor:previous.versions}));}
  }
  throw error;
