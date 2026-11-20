@@ -802,5 +802,23 @@
     "日本当地合作窗口",
     "Your local partner desk in Japan",
     "Your local partner desk in Japan"
+  ],
+  "BR2026039Title": [
+    "恩纳南绕行线计划11月21日启用部分四车道，自驾经过谷茶—仲泊请留意标志",
+    "恩納南繞行線預計11月21日啟用部分四車道，自駕經過谷茶—仲泊請留意標誌",
+    "恩納南バイパス、11月21日に一部4車線運用開始予定。谷茶〜仲泊を通行する方へ",
+    "Partial four-lane operation planned for Onna Minami Bypass on November 21"
+  ],
+  "BR2026039Desc": [
+    "冲绳综合事务局11月13日公告，国道58号恩纳南绕行线谷茶至仲泊交叉口约2.7公里区间，计划于2026年11月21日10:00开始部分四车道运行。切换时间可能因天气等原因调整。",
+    "沖繩綜合事務局11月13日公告，國道58號恩納南繞行線谷茶至仲泊路口約2.7公里區間，預計於2026年11月21日10:00開始部分四車道運行。切換時間可能因天氣等原因調整。",
+    "沖縄総合事務局は11月13日、国道58号恩納南バイパスの恩納村谷茶〜仲泊交差点の約2.7キロ区間で、2026年11月21日10時から一部4車線運用を開始する予定と発表しました。天候などにより切替時間が変更される場合があります。",
+    "In its November 13 announcement, the Okinawa General Bureau said partial four-lane operation is planned to begin at 10:00 JST on November 21, 2026, within the approximately 2.7-kilometre section of National Route 58’s Onna Minami Bypass between Tancha and Nakadomari Intersection. The changeover time may be adjusted due to weather or other conditions."
+  ],
+  "BR2026039Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }

@@ -32,3 +32,6 @@ M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新�
 - HB-149 (B内容, 2026-11-13): owner-approved HB104 compact design and exact bilingual v2 copy, 18 B2B pages with FAQ/Service metadata, homepage and travel-guide link-only entries, sitemap and llms. No learning, payment, pre-authorization, credentials or production data changes. Baseline 407c34eb46d733d7cc90e3f6beffb9929e8ce314. Local 36 viewport checks and source-copy comparison passed; publication receipt follows in task report.
 
 - HB-176 (2026-11-14): add approved zh-Hant/de/fr/es/da/it/pt-PT/nl B2B originals (72 pages), reciprocal ten-language links and sitemap; original Chinese/English body unchanged. 144 simulated mobile/desktop views and exact source/FAQ checks pass.
+
+
+HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypass announcement; content and required news indexes only. Publication pending original checks. Existing articles retained.
