@@ -35,3 +35,4 @@ M1103-02 B内容：新增冲绳2026年度上半年观光速報日/繁中/英新�
 
 
 HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypass announcement; content and required news indexes only. Publication pending original checks. Existing articles retained.
+# HB-065 — Added seven fixed, noindex first-party promotion short links with aggregate-only source counting; no exams, payment, entitlement or partner-referral changes.
