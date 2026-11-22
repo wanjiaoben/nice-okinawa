@@ -1,5 +1,29 @@
 [
   {
+    "id": "BR2026020A",
+    "slug": "naha-shurijo-reconstruction-support-grant-2026",
+    "date": "2026.11.23",
+    "title": "BR2026020ATitle",
+    "description": "BR2026020ADesc",
+    "link": "BR2026020ARead"
+  },
+  {
+    "id": "BR2026020B",
+    "slug": "shurijo-seiden-public-opening-20261123",
+    "date": "2026.11.23",
+    "title": "BR2026020BTitle",
+    "description": "BR2026020BDesc",
+    "link": "BR2026020BRead"
+  },
+  {
+    "id": "BR2026042",
+    "slug": "jlpt-december-2026-paper-test-voucher",
+    "date": "2026.11.23",
+    "title": "BR2026042Title",
+    "description": "BR2026042Desc",
+    "link": "BR2026042Read"
+  },
+  {
     "id": "BR2026039",
     "slug": "onna-minami-bypass-partial-four-lanes-20261121",
     "date": "2026.11.20",
