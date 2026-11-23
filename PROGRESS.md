@@ -38,3 +38,4 @@ HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypa
 # HB-065 — Added seven fixed, noindex first-party promotion short links with aggregate-only source counting; no exams, payment, entitlement or partner-referral changes.
 # HB-316 — 2026-11-23
 - 发布三组三语/四语固定稿到主站新闻入口：首页、四语新闻索引、sitemap 与正式文章页同步；未改业务、支付或客户数据。
+- HB-110 续车：重核神户海关 2026-11-04 案件公告仍在线后，将中古车出口合规提醒四语固定稿补发到主站新闻入口；JapanUsedCars/translation 零改动。
