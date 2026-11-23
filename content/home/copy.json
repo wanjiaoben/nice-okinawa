@@ -910,5 +910,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026044Title": [
+    "拆解车和旧零件能否出口？从一宗日本对阿联酋的出口申报看报价前该查什么",
+    "拆解車和中古零件能否出口？從一宗日本對阿聯酋的出口申報看報價前該查什麼",
+    "解体車・中古部品の輸出、見積もり前に何を確認するか UAE向け貨物の厳重注意事例",
+    "Dismantled vehicles and used parts: what to check before quoting on a shipment from Japan"
+  ],
+  "BR2026044Desc": [
+    "日本环境省公布的一份落款为11月9日的警告书显示，一家茨城县企业曾在横滨海关将一批拟运往阿联酋的货物申报为拆解车和二手汽车零件。检查和后续调查发现，货物中混有依法认定为废弃物的物品，企业未办理所需的废弃物出口手续，因而受到严正警告。这是针对该企业的个案，不是阿联酋全面禁止进口日本二手车。",
+    "日本環境省公布的一份日期為11月9日的警告書顯示，一家茨城縣業者曾向橫濱海關申報，一批擬運往阿聯酋的貨物為拆解車和中古汽車零件。檢查及後續調查發現，貨物中混有依法認定為廢棄物的物品，業者未辦理所需的廢棄物出口手續，因而受到嚴正警告。這是針對該業者的個案，不是阿聯酋全面禁止進口日本中古車。",
+    "環境省が公表した11月9日付の文書によると、茨城県の事業者が解体車・自動車中古部品として横浜税関に輸出申告したアラブ首長国連邦（UAE）向け貨物に、廃棄物処理法上の廃棄物が含まれていました。検査とその後の調査で判明したもので、事業者は必要な廃棄物の輸出手続きを経ておらず、厳重注意を受けました。日本の中古車全般を対象にしたUAEの輸入禁止措置ではありません。",
+    "A November 9 warning published by Japan’s Ministry of the Environment concerns an Ibaraki exporter that declared a UAE-bound shipment to Yokohama Customs as dismantled vehicles and used auto parts. An inspection and subsequent investigation found that the load included items classified as waste under Japanese law. The exporter had not completed the required waste-export procedure and received a formal warning. This was an individual case, not a UAE ban on used cars from Japan."
+  ],
+  "BR2026044Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
