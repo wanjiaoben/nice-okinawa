@@ -42,3 +42,6 @@ HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypa
 
 
 HB-333 / BR-2026-043 (2026-11-23): added the approved four-language Yui Rail temporary timetable travel notice, home/news indexes and sitemap; existing news retained.
+
+
+HB-334 / BR-2026-044 (2026-11-23): added the approved four-language dismantled-vehicle export warning case article, home/news indexes and sitemap; existing news retained.
