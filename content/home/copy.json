@@ -892,5 +892,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026043Title": [
+    "那霸马拉松周末去机场？12月5日、6日请查单轨临时时刻表",
+    "那霸馬拉松週末去機場？12月5日、6日請查單軌電車臨時時刻表",
+    "NAHAマラソンの週末に空港へ向かう方へ 12月5日・6日はゆいレールが臨時ダイヤに",
+    "Heading to Naha Airport on marathon weekend? Check the December 5–6 monorail timetable"
+  ],
+  "BR2026043Desc": [
+    "冲绳都市单轨电车（Yui Rail）11月10日宣布，配合第40届那霸马拉松，12月5日和6日将按临时时刻表运行。运营方预计，6日从首班车到上午9点左右，参赛者乘车会使列车较为拥挤。这是客流提醒，不是停运通知。",
+    "沖繩都市單軌電車（Yui Rail）11月10日宣布，配合第40屆那霸馬拉松，12月5日和6日將按臨時時刻表行駛。營運方預計，6日從首班車到上午9點左右，參賽者搭車會使列車較為擁擠。這是人潮提醒，不是停駛通知。",
+    "沖縄都市モノレールは11月10日、第40回NAHAマラソンに伴い、12月5日と6日に臨時ダイヤで運行すると発表しました。大会当日の6日はランナーの利用により、始発から午前9時ごろまで混雑が予想されています。運休のお知らせではありません。",
+    "Okinawa’s Yui Rail announced on November 10 that trains will run on special timetables on December 5 and 6 for the 40th NAHA Marathon. On race day, December 6, the operator expects crowded trains from the first service until about 9 a.m. as runners travel to the event. This is a crowding advisory, not a service suspension."
+  ],
+  "BR2026043Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
