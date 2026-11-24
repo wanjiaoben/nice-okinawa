@@ -928,5 +928,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026047Title": [
+    "台湾访日客创历年10月新高：到那霸机场后，去哪里接机或取车？",
+    "台灣赴日人次創歷年10月新高：抵達那霸機場，在哪裡接機、在哪裡取車？",
+    "台湾からの訪日客数が10月として過去最多に：那覇空港の送迎とレンタカー、どこで待つ？",
+    "Japan records its busiest October for arrivals from Taiwan: where to meet your ride at Naha Airport"
+  ],
+  "BR2026047Desc": [
+    "日本政府观光局（JNTO）11月18日公布，2026年10月台湾访日客估计为63.46万人，比去年同期增长6.5%，创历年10月新高。这是全日本的统计，不是冲绳到访人数。",
+    "日本政府觀光局（JNTO）11月18日公布，2026年10月台灣赴日旅客估計達63萬4,600人次，較去年同期增加6.5%，創歷年10月新高。這是全日本的統計，不是沖繩的入境人次。",
+    "日本政府観光局（JNTO）が11月18日に発表した推計によると、2026年10月の台湾からの訪日客数は63万4,600人で、前年同月比6.5％増となり、10月として過去最多を記録しました。これは日本全国の数値で、沖縄への来訪者数ではありません。",
+    "The Japan National Tourism Organization (JNTO) estimated on 18 November that Japan welcomed 634,600 arrivals from Taiwan in October 2026, up 6.5% year on year and a record for October. The figure is for Japan as a whole, not for Okinawa."
+  ],
+  "BR2026047Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }

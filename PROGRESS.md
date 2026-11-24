@@ -45,3 +45,6 @@ HB-333 / BR-2026-043 (2026-11-23): added the approved four-language Yui Rail tem
 
 
 HB-334 / BR-2026-044 (2026-11-23): added the approved four-language dismantled-vehicle export warning case article, home/news indexes and sitemap; existing news retained.
+
+
+HB-359 / BR-2026-047 (2026-11-24): four-language nationwide JNTO/Taiwan arrivals article candidate. The article explicitly states that the figure is national, not Okinawa arrivals. Publication pending Wan Review. No payment, booking, entitlement, or production-data changes.
