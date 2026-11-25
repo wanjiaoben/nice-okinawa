@@ -20,3 +20,5 @@
   - Move language pages to site-root directory URLs matching sitemap.
   - Recheck canonical and hreflang.
   - Re-run sitemap curl after deployment.
+
+- HB-372 (2026-11-25): Existing sitemap.xml has an unbound XML namespace prefix at line 103 (reproduced from pre-task main ccbca55). This task adds only four URL elements; previous sitemap bytes are preserved. Follow-up: repair the pre-existing namespace declaration in a separate maintenance task.
