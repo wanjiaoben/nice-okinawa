@@ -964,5 +964,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026051Title": [
+    "11月25日晚在丰见城还车？先看国道331号这段路",
+    "11月25日晚間在豐見城還車？先確認國道331號這段路",
+    "11月25日夜、豊見城市でレンタカーを返す方へ：国道331号の一部で通行止め予定",
+    "Returning a rental car in Tomigusuku on November 25? Check this stretch of Route 331"
+  ],
+  "BR2026051Desc": [
+    "11月25日21:00至26日06:00（日本时间），国道331号田头至名嘉地一带因桥梁施工，计划封闭从市道191号交叉口至名嘉地交叉口、往丰见城市役所方向的路段。这是单向局部封路，不是那霸机场关闭。",
+    "日本時間11月25日21:00至26日06:00，國道331號田頭至名嘉地一帶因橋梁施工，預計封閉從市道191號交叉口至名嘉地交叉口、往豐見城市役所方向的路段。這是局部單向封路，不是那霸機場關閉。",
+    "11月25日21時から26日午前6時まで（日本時間）、橋梁工事に伴い、国道331号の田頭～名嘉地地区では、市道191号交差点から名嘉地交差点までの豊見城市役所方面行きが通行止めとなる予定です。規制は片方向の一部区間のみで、那覇空港の閉鎖ではありません。",
+    "Bridge work is scheduled to close the section of Route 331 from the Municipal Road 191 intersection to the Nakachi (名嘉地) intersection in the direction of Tomigusuku City Hall, from 9 p.m. on November 25 to 6 a.m. on November 26, Japan time. The closure affects one direction only. It is not a closure of Naha Airport."
+  ],
+  "BR2026051Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
