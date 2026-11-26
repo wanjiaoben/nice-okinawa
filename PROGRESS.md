@@ -55,3 +55,5 @@ HB-359 / BR-2026-047 (2026-11-24): four-language nationwide JNTO/Taiwan arrivals
 HB-372 / BR-2026-051 (2026-11-25): approved four-language Tomigusuku Route 331 night restriction news. Official map and translations checked; 26 November remains reserve only. Content-only; no booking/payment/login/entitlement changes.
 
 HB-388 / BR-2026-052 v1：JEES首场CBT四语新闻；只新增本篇和必要入口。来源与译文复核通过，发布状态见任务REPORT。
+
+HB-389 / BR-2026-053 v1：11月26日冲绳海况四语新闻；只新增本篇和必要入口。来源与译文复核通过，发布状态见任务REPORT。

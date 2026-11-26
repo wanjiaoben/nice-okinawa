@@ -1000,5 +1000,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026053Title": [
+    "11月26日冲绳出海：出发前先确认自己这班船",
+    "11月26日沖繩出海：出門前先確認自己的船班",
+    "11月26日の沖縄の海：集合場所へ向かう前に運航確認を",
+    "Okinawa boat trips on 26 November: check your departure before leaving"
+  ],
+  "BR2026053Desc": [
+    "那霸海上保安部11月26日09:20（日本时间）更新的信息显示，冲绳本岛中南部、恩纳・金武和庆良间等地有雷电注意报，提醒防范突风。当天06:15更新的预报预计，冲绳东部海域至15:00风力将由东风20节增强至东北风30节，浪高3米。",
+    "那霸海上保安部11月26日09:20（日本時間）更新的資訊顯示，沖繩本島中南部、恩納・金武及慶良間等地有雷電注意報，須留意突發強風。當天06:15更新的預報指出，沖繩東部海域至15:00風勢將由東風20節增強為東北風30節，浪高3公尺。",
+    "那覇海上保安部の11月26日9時20分（日本時間）更新の情報では、沖縄本島中南部、恩納・金武地区、慶良間などに雷注意報が出ており、突風にも注意が必要です。6時15分更新の予報では、沖縄東方海上で15時までに東の風20ノットから北東の風30ノットに強まり、波は3メートルの見込みです。",
+    "At 09:20 Japan time on 26 November, the Naha Coast Guard Office listed a thunderstorm advisory with a risk of sudden gusts for areas including central and southern Okinawa Island, Onna and Kin, and the Kerama Islands. Its 06:15 forecast for waters east of Okinawa called for easterly winds of 20 knots strengthening to 30 knots from the northeast by 15:00, with three-metre waves."
+  ],
+  "BR2026053Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
