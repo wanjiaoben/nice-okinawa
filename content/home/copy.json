@@ -1036,5 +1036,35 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "newsTravel": [
+    "旅游",
+    "旅遊",
+    "旅行",
+    "Travel"
+  ],
+  "newsTrade": [
+    "贸易",
+    "貿易",
+    "貿易",
+    "Trade"
+  ],
+  "newsLearning": [
+    "学习",
+    "學習",
+    "学び",
+    "Learning"
+  ],
+  "newsMore": [
+    "更多",
+    "更多",
+    "もっと見る",
+    "More"
+  ],
+  "newsCategories": [
+    "新闻分类",
+    "新聞分類",
+    "ニュースの分類",
+    "News categories"
   ]
 }
