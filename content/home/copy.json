@@ -1018,5 +1018,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026054Title": [
+    "来冲绳，机场接送和邮轮靠港怎么约？",
+    "抵達沖繩，機場接送和郵輪靠港要怎麼約？",
+    "沖縄の送迎予約：飛行機なら便名、クルーズなら帰船時刻も",
+    "Arriving in Okinawa by air or cruise ship? What to include in a transfer enquiry"
+  ],
+  "BR2026054Desc": [
+    "冲绳县11月25日公布的10月初步统计显示，外国客经空路入域19.53万人，同比增7.5%；经海路入域4.72万人，降40.4%。海路数字含船员等1.42万人，不能直接当作上岸游玩的旅客数。",
+    "沖繩縣11月25日公布的10月初步統計顯示，外國旅客經空路入境沖繩的有19.53萬人，年增7.5%；經海路抵達的有4.72萬人，年減40.4%。海路數字包含船員等1.42萬人，不等於實際上岸觀光的人數。",
+    "沖縄県が11月25日に公表した10月の速報では、外国客の空路での入域は19万5,300人で前年同月比7.5％増、海路は4万7,200人で40.4％減でした。海路には乗務員等1万4,200人が含まれ、上陸観光をした旅行者数とは一致しません。",
+    "Okinawa Prefecture’s preliminary October figures, released on 25 November, recorded 195,300 foreign arrivals by air, up 7.5% year on year, and 47,200 by sea, down 40.4%. The sea total includes 14,200 crew members and others; it is not a count of visitors who went sightseeing ashore."
+  ],
+  "BR2026054Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
