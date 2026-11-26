@@ -982,5 +982,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026052Title": [
+    "12月1日开考的是哪一场？先看准考试名称",
+    "12月1日考的是哪一場？先確認考試名稱",
+    "12月1日に始まるのはどの試験？申し込む前に名称を確認",
+    "Which Japanese teaching test starts on 1 December?"
+  ],
+  "BR2026052Desc": [
+    "JEES 于11月20日公布了「日本語教育能力検定試験」机考说明视频，首场定于2026年12月1日。这不是取得国家资格「登録日本語教員」的考试。",
+    "JEES 於11月20日公布「日本語教育能力検定試験」電腦考試操作影片，首場訂於2026年12月1日。這並非取得日本國家資格「登録日本語教員」的考試。",
+    "JEESは11月20日、日本語教育能力検定試験のCBT説明動画を公開しました。初回は2026年12月1日です。国家資格「登録日本語教員」のための日本語教員試験とは異なります。",
+    "On 20 November, JEES released a computer-based testing guide for its Japanese Language Teaching Competency Test. The first sitting is on 1 December 2026. This is not the examination for Japan’s national Registered Japanese Language Teacher qualification."
+  ],
+  "BR2026052Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
