@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 from html import escape
-from main_news import render_news
+from main_news import render_news_lists
 
 ROOT = Path(__file__).resolve().parents[1]
 copy = json.loads((ROOT / 'content/home/copy.json').read_text())
@@ -66,12 +66,9 @@ for group,cards in [('travel',[('snorkel','snorkel','◌'),('fishing','fishing',
     if group == 'travel': html += a('kerama','/zh-hans/kerama-snorkeling/','sub-link','data-route="kerama"')
     if group == 'business': html += a('b2bDesk','/zh-hans/partners/','sub-link','data-route="b2bDesk" data-b2b-desk')
     html += '</div>'
-html += '</section><section class="block news-section" id="news"><div class="wrap">'+head('newsTitle','newsDesc')+'<div class="tips-grid cards">'
-html += render_news(ROOT, copy, news)
-html += '<!-- TRAVEL-TRANSPORT-20261104-01 START -->'+news('transportTitle','transportDesc','2026.11.04','/zh-hans/news/okinawa-licensed-transport-guide-20261104/','readTransport','transport')+'<!-- TRAVEL-TRANSPORT-20261104-01 END -->'
-html += news('grantTitle','grantDesc','2026.11.03','https://training.nice.okinawa/news/naha-foreign-talent-training-grant-2026/','readJa')
-html += news('tourismTitle','tourismDesc','2026.11.03','/zh-hant/news/okinawa-tourism-h1-2026/','readTourism','tourism')
-html += '</div></div></section><section class="block wrap" id="travel-tips">'+head('guides')+'<div class="cards">'+news('typhoon','typhoonDesc','','/en/travel-tips/okinawa-typhoon-travel-safety/','readEn')+'</div></section>'
+html += '</section><section class="block news-section" id="news"><div class="wrap">'+head('newsTitle','newsDesc')
+html += render_news_lists(ROOT, copy)
+html += '</div></section><section class="block wrap" id="travel-tips">'+head('guides')+'<div class="cards">'+news('typhoon','typhoonDesc','','/en/travel-tips/okinawa-typhoon-travel-safety/','readEn')+'</div></section>'
 html += '<section class="block wrap" id="about"><div class="about-grid"><div>'+head('aboutTitle')+t('aboutBody','p')+t('aboutBody2','p')+'<div class="facts"><div>'+t('base','strong')+t('baseLabel')+'</div></div><details id="history">'+t('history','summary')+'<ol class="timeline">'+t('historyArrival','li')+''.join(t('history'+str(i),'li') for i in range(1,6))+'</ol></details></div><div class="partners-panel" id="partners">'+t('partnerTitle','h2')+t('partnerBody','p')+t('partnerDivision','p')+a('partnerCta','/zh/partners/','button','data-route="partners"')+t('partnerNote','p','class="form-note"')+'</div></div></section>'
 html += '<section class="block contact" id="contact"><div class="wrap contact-grid"><div>'+t('contactTitle','h2')+t('contactDesc','p','style="margin-top:22px"')+'<div class="contact-links"><a href="mailto:info@nice.okinawa">info@nice.okinawa</a><a href="https://wa.me/817089523968" target="_blank" rel="noopener">WhatsApp · +81 70-8952-3968</a></div></div><form id="contact-form" novalidate><div class="form-grid">'
 for key,typ in [('name','text'),('email','email')]:

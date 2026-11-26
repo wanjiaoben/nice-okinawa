@@ -34,6 +34,7 @@
       if (/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) el.href = new URL('./'+prefix+'/news/'+slug+'/', siteRoot).href;
     });
     document.getElementById('form-status').textContent = '';
+    document.querySelector('[data-news-tabs]').setAttribute('aria-label', text('newsCategories'));
   }
   document.getElementById('language').addEventListener('change', event => {
     locale = event.target.value;
@@ -63,5 +64,40 @@
   }
   form.addEventListener('submit', e => { e.preventDefault(); send('email'); });
   document.getElementById('waBtn').addEventListener('click', () => send('whatsapp'));
+  const tabs = [...document.querySelectorAll('[data-news-tab]')];
+  const panels = [...document.querySelectorAll('[data-news-panel]')];
+  const mobileNews = window.matchMedia('(max-width: 699px)');
+  let activeNews = 'travel';
+  function updateNewsTabs() {
+    document.querySelector('[data-news-tabs]').hidden = !mobileNews.matches;
+    tabs.forEach(tab => {
+      const active = tab.dataset.newsTab === activeNews;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => {
+      panel.hidden = mobileNews.matches && panel.dataset.newsPanel !== activeNews;
+      if (mobileNews.matches) {
+        panel.setAttribute('role', 'tabpanel');
+        panel.setAttribute('aria-labelledby', 'news-tab-' + panel.dataset.newsPanel);
+      } else {
+        panel.removeAttribute('role');
+        panel.setAttribute('aria-labelledby', 'news-heading-' + panel.dataset.newsPanel);
+      }
+    });
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => { activeNews = tab.dataset.newsTab; updateNewsTabs(); });
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length - 1;
+      if (next !== undefined) { event.preventDefault(); tabs[next].click(); tabs[next].focus(); }
+    });
+  });
+  mobileNews.addEventListener('change', updateNewsTabs);
+  updateNewsTabs();
   applyLanguage();
 })();
