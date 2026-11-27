@@ -1066,5 +1066,23 @@
     "新聞分類",
     "ニュースの分類",
     "News categories"
+  ],
+  "BR2026057Title": [
+    "11月28日冲绳出海：周六晚间浪高预计升至4米，请按船班确认",
+    "11月28日沖繩出海：週六晚間浪高估達4公尺，出發前請確認船班",
+    "11月28日の沖縄周辺海域、夜にかけて波の高さは4メートルの予想　出発前に運航状況の確認を",
+    "Okinawa boat trips on 28 November: waves forecast to reach 4 metres by Saturday evening"
+  ],
+  "BR2026057Desc": [
+    "已预约海钓、包船或乘船浮潜的旅客，请在前往码头前，向运营方确认出港港口、集合时间及航线是否有变。",
+    "已預訂海釣、包船或搭船浮潛的旅客，請在前往碼頭前向業者確認出發港口、集合時間及航線是否有變。",
+    "船釣りやチャーター船、ボートシュノーケリングを予約している方は、港に向かう前に、出港地や集合時刻、航路に変更がないか運航事業者にご確認ください。",
+    "If you have booked a fishing charter, private boat trip or boat-based snorkelling tour, check your departure port, meeting time and route with the operator before heading to the harbour."
+  ],
+  "BR2026057Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
