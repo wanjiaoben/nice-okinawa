@@ -68,3 +68,5 @@ BR-2026-060 capacity (2026-11-28): raise the defensive news-record limit from 20
 BR-2026-060 / BR-2026-060 v1：11月29日冲绳海况四语新闻；只新增本篇和必要入口。来源与译文复核通过，发布状态见任务REPORT。
 
 BR-2026-058：森町培训补助四语，批准稿022ed59a；保留新发布060及全部旧新闻，发布回执见任务REPORT。
+
+BR-2026-059: Add approved four-language KEBS 2027 vehicle import news and existing main-site entries only; JUC excluded. Checks and release receipt in task report.
