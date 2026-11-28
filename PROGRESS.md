@@ -64,3 +64,5 @@ HB-391：19条首页新闻改三类紧凑列表，四语×桌面/手机检查通
 
 HB-417 / BR-2026-057 v1：11月28日冲绳海况四语新闻；只新增本篇和必要入口。来源与译文复核通过，发布状态见任务REPORT。
 BR-2026-060 capacity (2026-11-28): raise the defensive news-record limit from 20 to 60 only. Existing homepage grouping, article content, links, sitemap and runtime behavior are preserved. This separate change precedes the approved news articles; deployment evidence remains in the task report.
+
+BR-2026-060 / BR-2026-060 v1：11月29日冲绳海况四语新闻；只新增本篇和必要入口。来源与译文复核通过，发布状态见任务REPORT。
