@@ -7,7 +7,7 @@ def load_news(root, copy):
     if not source.exists():
         return []
     records = json.loads(source.read_text())
-    if not isinstance(records, list) or len(records) > 20:
+    if not isinstance(records, list) or len(records) > 60:
         raise ValueError('news records')
     seen = set()
     for item in records:
