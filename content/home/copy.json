@@ -1102,5 +1102,23 @@
     "閱讀",
     "読む",
     "Read"
+  ],
+  "BR2026058Title": [
+    "森町企业给员工报日语班，哪些费用能申请补贴？",
+    "森町企業替員工報讀日語班，哪些費用可以申請補助？",
+    "森町の日本語学習補助、従業員のJLPT合格後に申請できる費用は？",
+    "Mori employers can claim part of the cost of Japanese lessons after staff pass the JLPT"
+  ],
+  "BR2026058Desc": [
+    "静冈县森町11月17日更新了企业日语学习补贴指南。在町内设有营业场所的雇有外籍员工的雇主，可自行组织培训，也可送员工到面向非日语母语者的学校或教室学习，包括线上课。课程须以通过JLPT N3或以上为目标；只学岗位术语或操作手册不在范围内。",
+    "靜岡縣森町於11月17日更新企業日語學習補助指南。在町內設有營業據點的僱有外籍員工的僱主，可自行辦班，也可安排員工到以非日語母語者為主要對象的學校或教室上課，線上課程亦可。課程須以通過JLPT N3或以上級別為目標；只教授職場術語或操作手冊的課程不適用。",
+    "静岡県森町は11月17日、外国人材等の日本語学習を支援する事業者向けに補助制度の案内を更新しました。町内に事業所を置く対象事業者は、自社で研修を開くほか、日本語を母語としない人を主な対象とする学校や教室に従業員を通わせることもできます。オンライン受講も対象です。JLPTのN3以上の合格を目指すことが条件で、業務上の専門用語やマニュアルの習得を目的とする研修は対象外です。",
+    "Mori Town in Shizuoka Prefecture updated its guidance on 17 November. Employers with a workplace in the town who hire foreign staff can run classes or enrol staff at a school or class serving non-native speakers of Japanese. Online lessons qualify too. The aim must be to pass JLPT N3 or higher; training confined to job-specific terminology or operating manuals is excluded."
+  ],
+  "BR2026058Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
   ]
 }
