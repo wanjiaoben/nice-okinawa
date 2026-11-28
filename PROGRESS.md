@@ -70,3 +70,5 @@ BR-2026-060 / BR-2026-060 v1：11月29日冲绳海况四语新闻；只新增本
 BR-2026-058：森町培训补助四语，批准稿022ed59a；保留新发布060及全部旧新闻，发布回执见任务REPORT。
 
 BR-2026-059: Add approved four-language KEBS 2027 vehicle import news and existing main-site entries only; JUC excluded. Checks and release receipt in task report.
+
+HB-443（2026-11-28，B内容）：仅将公司成立年份改2015，英文established in 2015；个人2009到冲绳经历保留。精确文字/JSON-LD替换，其余字节守恒，支付/权益/预授权零影响。Wan已在交接E明确批准按原纯文字流程直接上线。
