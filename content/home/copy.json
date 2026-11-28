@@ -1085,6 +1085,24 @@
     "読む",
     "Read"
   ],
+  "BR2026060Title": [
+    "冲绳出海改到11月29日？先向船方确认周日那一班",
+    "沖繩出海改到11月29日？先跟船家確認週日的班次",
+    "11月29日の沖縄での海遊び、日曜に振り替える前に確認したいこと",
+    "Moving an Okinawa boat trip to Sunday, 29 November? Check the sailing, not just the date"
+  ],
+  "BR2026060Desc": [
+    "把周六的海钓、包船或浮潜改到周日早上，并不意味着风浪已经减弱。冲绳气象台11月28日07:00（日本时间）发布的预报显示，29日冲绳南方海域预计吹东北风35节，浪高4米；到当晚21:00，预计风力降至30节、浪高降至3米。气象台已对冲绳南方海域发布海上强风警报。",
+    "把週六的海釣、包船或浮潛改到週日早上，不代表風浪已經轉弱。沖繩氣象台11月28日07:00（日本時間）發布的預報顯示，29日沖繩南方海域預計吹東北風35節、浪高4公尺；至當晚21:00，風速預計降至30節、浪高降至3公尺。氣象台已對沖繩南方海域發布海上強風警報。",
+    "土曜の船釣りやチャーター、シュノーケリングを日曜の朝に延期しても、海が穏やかになるとは限りません。沖縄気象台が11月28日7時（日本時間）に発表した予報では、29日の沖縄南方海上は北東の風35ノット、波の高さは4メートル。29日21時までに風は30ノット、波は3メートルになる見込みです。沖縄南方海上には海上強風警報が出ています。",
+    "Moving a Saturday fishing charter or snorkelling trip to Sunday morning does not guarantee calmer seas. In its forecast issued at 07:00 Japan time on 28 November, the Okinawa Meteorological Observatory forecast north-easterly winds of 35 knots and four-metre waves in waters south of Okinawa on Sunday. Winds were forecast to ease to 30 knots and waves to three metres by 21:00 on Sunday. A near-gale warning is in effect for these waters."
+  ],
+  "BR2026060Read": [
+    "阅读",
+    "閱讀",
+    "読む",
+    "Read"
+  ],
   "BR2026058Title": [
     "森町企业给员工报日语班，哪些费用能申请补贴？",
     "森町企業替員工報讀日語班，哪些費用可以申請補助？",
